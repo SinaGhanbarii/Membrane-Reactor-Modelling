@@ -1,0 +1,19 @@
+# Public example case with the same structure as rig_private.yaml.
+# Values are generic illustrative syngas, NOT the H2Site rig. Safe to commit.
+source: "illustrative example"
+
+feed:
+  syngas_mass_flow_kg_h: 1.0
+  composition_mol_pct: {H2: 35.0, CO: 40.0, CO2: 15.0, CH4: 5.0, N2: 5.0}
+  water_mass_flow_kg_h: 1.0
+
+operating:
+  P_ret_barg: [4.0]
+  P_perm_bara: [0.2]
+  T_inlet_C: 300
+  T_outlet_max_C: 450
+  T_membrane_min_C: 325
+
+nominal_permeate:
+  H2_kg_h: 0.02
+  H2_SLPM: 3.6

@@ -1,0 +1,11 @@
+# Confidential rig data (H2Site) - never commit
+params/*_private.yaml
+data/raw/
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Results derived from confidential rig data
+results/

@@ -1,0 +1,13 @@
+name: pbmr1d
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - numpy
+  - scipy
+  - cantera>=3.0
+  - pyyaml
+  - pytest
+  - matplotlib
+  - lmfit
+  - salib
+  - jupyter
