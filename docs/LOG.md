@@ -33,3 +33,9 @@
 - K_eq: Cantera vs Moe-form differ 3-8 %; check against Twigg/other correlation when read.
 
 **Next**: Phase 2 - isothermal reactor model (needs placeholder kinetics + membrane params).
+
+## 6 Nov 2026 - Review of "H2Site - More Details About Membrane" folder
+- 14 public papers/patents reviewed; note in docs/membrane_folder_review.md.
+- K_eq correlation traced to Moe (1962) via Helmi et al. (2016); Karagoz attribution to be dropped.
+- Membrane parameters extracted (Melendez 2017, Helmi thesis, Barbieri 2008); CO inhibition parameter sets disagree strongly at rig-like p_CO -> treat as sensitivity.
+- Open: is the 555.003 reactor fixed or fluidised bed? Which catalyst? (decides what transfers).

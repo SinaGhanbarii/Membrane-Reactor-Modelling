@@ -16,7 +16,7 @@ F0 = np.array([0.40, 1.20, 0.15, 0.35, 0.05, 0.05]) * 1e-3
 
 @pytest.mark.parametrize("TC", [250, 300, 350, 400, 450, 500])
 def test_keq_matches_empirical_correlation(TC):
-    """Cantera K_eq within 10 % of the Moe-type correlation (Karagoz et al., 2020)."""
+    """Cantera K_eq within 10 % of the Moe (1962) correlation, as quoted by Helmi et al. (2016)."""
     T = TC + 273.15
     assert t.K_wgs(T) == pytest.approx(t.K_wgs_moe(T), rel=0.10)
 

@@ -1,0 +1,3495 @@
+{
+ "root": "Pd-membrane WGS reactor (PhD)",
+ "collections": [
+  "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics",
+  "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+  "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+  "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer",
+  "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+  "Pd-membrane WGS reactor (PhD)/06 Thermal behaviour and heat transfer",
+  "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports",
+  "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)",
+  "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)",
+  "Pd-membrane WGS reactor (PhD)/10 Excluded (off-topic)"
+ ],
+ "items": [
+  {
+   "review_id": "R08",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R08"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R08; study type: MIXED; relevance: Core (score 92). File: 1-s2.0-S1385894715005690-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Modelling and experimental studies of a water-gas shift catalytic membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hla",
+      "firstName": "S.S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Morpeth",
+      "firstName": "L.D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Dolan",
+      "firstName": "M.D."
+     }
+    ],
+    "publicationTitle": "Chemical Engineering Journal",
+    "volume": "276",
+    "issue": "",
+    "pages": "289-302",
+    "date": "2015",
+    "DOI": "10.1016/j.cej.2015.04.079"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics",
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/06 Thermal behaviour and heat transfer",
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters"
+   ]
+  },
+  {
+   "review_id": "R03",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R03"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R03; study type: EXP; relevance: Core (score 88). File: 1-s2.0-S0376738807006412-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "High pressure performance of thin Pd-23%Ag/stainless steel composite membranes in water gas shift gas mixtures; influence of dilution, mass transfer and surface effects on the hydrogen flux",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Peters",
+      "firstName": "T.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Stange",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Klette",
+      "firstName": "H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Bredesen",
+      "firstName": "R."
+     }
+    ],
+    "publicationTitle": "Journal of Membrane Science",
+    "volume": "316",
+    "issue": "",
+    "pages": "119-127",
+    "date": "2008",
+    "DOI": "10.1016/j.memsci.2007.08.056"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+    "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer"
+   ]
+  },
+  {
+   "review_id": "R01",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R01"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R01; study type: EXP; relevance: Core (score 85). File: 1-s2.0-S0360319908006174-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "The influence of the CO inhibition effect on the estimation of the H2 purification unit surface",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Scura",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "De Luca",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "33",
+    "issue": "",
+    "pages": "4183-4192",
+    "date": "2008",
+    "DOI": "10.1016/j.ijhydene.2008.05.081"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters"
+   ]
+  },
+  {
+   "review_id": "R02",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R02"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R02; study type: MIXED; relevance: Core (score 85). File: 1-s2.0-S1383586607004790-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "A novel model equation for the permeation of hydrogen in mixture with carbon monoxide through Pd-Ag membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Scura",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Lentini",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "De Luca",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Separation and Purification Technology",
+    "volume": "61",
+    "issue": "",
+    "pages": "217-224",
+    "date": "2008",
+    "DOI": "10.1016/j.seppur.2007.10.010"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)"
+   ]
+  },
+  {
+   "review_id": "R09",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R09"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R09; study type: MIXED; relevance: Core (score 85). File: 1-s2.0-0926860X95003150-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Stationary and transient kinetics of the high temperature water-gas shift reaction",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Keiski",
+      "firstName": "R.L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Salmi",
+      "firstName": "T."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Niemistö",
+      "firstName": "P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ainassaari",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pohjola",
+      "firstName": "V.J."
+     }
+    ],
+    "publicationTitle": "Applied Catalysis A: General",
+    "volume": "137",
+    "issue": "",
+    "pages": "349-370",
+    "date": "1996"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R13",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R13"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R13; study type: SIM; relevance: Core (score 85). File: 1-s2.0-S0360319915308818-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Concentration polarization distribution along Pd-based membrane reactors: A modelling approach applied to Water-Gas Shift",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Melone",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sun",
+      "firstName": "Y."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Brunetti",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "41",
+    "issue": "",
+    "pages": "2660-2670",
+    "date": "2016",
+    "DOI": "10.1016/j.ijhydene.2015.12.141"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer",
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R30",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R30"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R30; study type: MIXED; relevance: Core (score 85). File: 20170327_CO_Helmi_Siasi_Farimani.pdf.",
+    "itemType": "thesis",
+    "title": "Fluidized bed membrane reactors for water gas shift: mass transfer, hydrodynamics and experimental demonstration",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Helmi",
+      "firstName": "A."
+     }
+    ],
+    "thesisType": "PhD thesis",
+    "university": "Technische Universiteit Eindhoven",
+    "date": "2017"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+    "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer",
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)"
+   ]
+  },
+  {
+   "review_id": "R11",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R11"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R11; study type: SIM; relevance: Core (score 82). File: c1ra00375e.pdf.",
+    "itemType": "journalArticle",
+    "title": "Pd-based membrane reactors for one-stage process of water gas shift",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Brunetti",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "RSC Advances",
+    "volume": "1",
+    "issue": "",
+    "pages": "651-661",
+    "date": "2011",
+    "DOI": "10.1039/c1ra00375e"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R04",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R04"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R04; study type: EXP; relevance: Core (score 80). File: 1-s2.0-S036031991402374X-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Development of thin Pd-Ag supported membranes for fluidized bed membrane reactors including WGS related gases",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Helmi",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Coenen",
+      "firstName": "K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Melendez",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Viviente",
+      "firstName": "J.L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "40",
+    "issue": "",
+    "pages": "3506-3519",
+    "date": "2015",
+    "DOI": "10.1016/j.ijhydene.2014.08.074"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)"
+   ]
+  },
+  {
+   "review_id": "R06",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R06"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R06; study type: MIXED; relevance: Core (score 80). File: 1-s2.0-S0376738816318191-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Preparation and characterization of ceramic supported ultra-thin (~1 µm) Pd-Ag membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Melendez",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Arias",
+      "firstName": "P.L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     }
+    ],
+    "publicationTitle": "Journal of Membrane Science",
+    "volume": "528",
+    "issue": "",
+    "pages": "12-23",
+    "date": "2017",
+    "DOI": "10.1016/j.memsci.2017.01.011"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+    "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer"
+   ]
+  },
+  {
+   "review_id": "R10",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R10"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R10; study type: EXP; relevance: Core (score 80). File: molecules-21-00376.pdf.",
+    "itemType": "journalArticle",
+    "title": "Fluidized bed membrane reactors for ultra pure H2 production - a step forward towards commercialization",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Helmi",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Melendez",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     }
+    ],
+    "publicationTitle": "Molecules",
+    "volume": "21",
+    "issue": "",
+    "pages": "376",
+    "date": "2016",
+    "DOI": "10.3390/molecules21030376"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)",
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters"
+   ]
+  },
+  {
+   "review_id": "R14",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R14"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Core"
+     }
+    ],
+    "extra": "Review ID: R14; study type: SIM; relevance: Core (score 75). File: adrover2009.pdf.",
+    "itemType": "journalArticle",
+    "title": "Theoretical study of a membrane reactor for the water gas shift reaction under nonisothermal conditions",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Adrover",
+      "firstName": "M.E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "López",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Borio",
+      "firstName": "D.O."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pedernera",
+      "firstName": "M.N."
+     }
+    ],
+    "publicationTitle": "AIChE Journal",
+    "volume": "55",
+    "issue": "12",
+    "pages": "3206-3213",
+    "date": "2009",
+    "DOI": "10.1002/aic.11929"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/06 Thermal behaviour and heat transfer"
+   ]
+  },
+  {
+   "review_id": "R12",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R12"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R12; study type: MIXED; relevance: Supporting (score 60). File: membranes-06-00044.pdf.",
+    "itemType": "journalArticle",
+    "title": "Integration of methane steam reforming and water gas shift reaction in a Pd/Au/Pd-based catalytic membrane reactor for process intensification",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Castro-Dominguez",
+      "firstName": "B."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Mardilovich",
+      "firstName": "I.P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "L.-C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Dixon",
+      "firstName": "A.G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kazantzis",
+      "firstName": "N.K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "Y.H."
+     }
+    ],
+    "publicationTitle": "Membranes",
+    "volume": "6",
+    "issue": "",
+    "pages": "44",
+    "date": "2016",
+    "DOI": "10.3390/membranes6030044"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R19",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R19"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R19; study type: SIM; relevance: Supporting (score 60). File: 1-s2.0-S2772427123000700-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "An investigation of water gas shift reaction in a Pd-alloy membrane reactor with an optimized crossflow configuration",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Chen",
+      "firstName": "W.-H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Li",
+      "firstName": "S.-C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sharma",
+      "firstName": "A.K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Juan",
+      "firstName": "J.C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Saravanakumar",
+      "firstName": "A."
+     }
+    ],
+    "publicationTitle": "Energy Nexus",
+    "volume": "12",
+    "issue": "",
+    "pages": "100240",
+    "date": "2023",
+    "DOI": "10.1016/j.nexus.2023.100240"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/06 Thermal behaviour and heat transfer",
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R22",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R22"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R22; study type: REVIEW; relevance: Supporting (score 60). File: Modelling_of_membrane_reactors_for_hydrogen_produc.pdf.",
+    "itemType": "bookSection",
+    "title": "Modeling of membrane reactors for hydrogen production and purification",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kuipers",
+      "firstName": "J.A.M."
+     },
+     {
+      "creatorType": "editor",
+      "lastName": "Drioli",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "editor",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     }
+    ],
+    "bookTitle": "Membrane Engineering for the Treatment of Gases, Volume 2",
+    "publisher": "Royal Society of Chemistry",
+    "place": "Cambridge",
+    "date": "2011",
+    "pages": "Chapter 10"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports",
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/04 Concentration polarisation and mass transfer"
+   ]
+  },
+  {
+   "review_id": "R05",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R05"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R05; study type: EXP; relevance: Supporting (score 55). File: 1-s2.0-S0360319915025914-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Pd-based metallic supported membranes: High-temperature stability and fluidized bed reactor testing",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Medrano",
+      "firstName": "J.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Melendez",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Parco",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "41",
+    "issue": "",
+    "pages": "8706-8718",
+    "date": "2016",
+    "DOI": "10.1016/j.ijhydene.2015.10.094"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters",
+    "Pd-membrane WGS reactor (PhD)/03 Gas inhibition (CO, CO2, H2O)"
+   ]
+  },
+  {
+   "review_id": "R07",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R07"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R07; study type: EXP; relevance: Supporting (score 55). File: arradeve2018.pdf.",
+    "itemType": "journalArticle",
+    "title": "Development of Pd-based double-skinned membranes for hydrogen production in fluidized bed membrane reactors",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Arratibel",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Laso",
+      "firstName": "I."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Journal of Membrane Science",
+    "volume": "550",
+    "issue": "",
+    "pages": "536-544",
+    "date": "2018",
+    "DOI": "10.1016/j.memsci.2017.10.064"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters"
+   ]
+  },
+  {
+   "review_id": "R15",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R15"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R15; study type: SIM; relevance: Supporting (score 55). File: 1-s2.0-S0376738810000232-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "A simulation study of the effect of operating and design parameters on the performance of a water gas shift membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Boutikos",
+      "firstName": "P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Nikolakis",
+      "firstName": "V."
+     }
+    ],
+    "publicationTitle": "Journal of Membrane Science",
+    "volume": "350",
+    "issue": "",
+    "pages": "378-386",
+    "date": "2010",
+    "DOI": "10.1016/j.memsci.2010.01.014"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R16",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R16"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R16; study type: SIM; relevance: Supporting (score 55). File: 1-s2.0-S0263876211000992-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "CFD analysis of water gas shift membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Byron Smith",
+      "firstName": "R.J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Muruganandam",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Murthy Shekhar",
+      "firstName": "S."
+     }
+    ],
+    "publicationTitle": "Chemical Engineering Research and Design",
+    "volume": "89",
+    "issue": "",
+    "pages": "2448-2456",
+    "date": "2011",
+    "DOI": "10.1016/j.cherd.2011.02.031"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/06 Thermal behaviour and heat transfer"
+   ]
+  },
+  {
+   "review_id": "R17",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R17"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R17; study type: SIM; relevance: Supporting (score 55). File: 1-s2.0-S0360319921004961-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Simulation study on the performance of low-temperature water gas shift membrane reactor system",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Xia",
+      "firstName": "H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Zhong",
+      "firstName": "W."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Bian",
+      "firstName": "Z."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Jiang",
+      "firstName": "B."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "46",
+    "issue": "",
+    "pages": "15595-15608",
+    "date": "2021",
+    "DOI": "10.1016/j.ijhydene.2021.02.016"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)"
+   ]
+  },
+  {
+   "review_id": "R24",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R24"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R24; study type: REVIEW; relevance: Supporting (score 55). File: 1-s2.0-S0360319917309886-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Palladium based membranes and membrane reactors for hydrogen production and purification: An overview of research activities at Tecnalia and TU/e",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Helmi",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Medrano",
+      "firstName": "J.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Coenen",
+      "firstName": "K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Arratibel",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Melendez",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "de Nooijer",
+      "firstName": "N.C.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Spallina",
+      "firstName": "V."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Viviente",
+      "firstName": "J.L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Zuñiga",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "van Sint Annaland",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "42",
+    "issue": "",
+    "pages": "13763-13776",
+    "date": "2017",
+    "DOI": "10.1016/j.ijhydene.2017.03.067"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports"
+   ]
+  },
+  {
+   "review_id": "R18",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R18"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R18; study type: SIM; relevance: Supporting (score 50). File: 1-s2.0-S0360319919319743-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Multi-scale model based design of membrane reactor/separator processes for intensified hydrogen production through the water gas shift reaction",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Karagöz",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Tsotsis",
+      "firstName": "T.T."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Manousiouthakis",
+      "firstName": "V.I."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "45",
+    "issue": "",
+    "pages": "7339-7353",
+    "date": "2020",
+    "DOI": "10.1016/j.ijhydene.2019.05.118"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)",
+    "Pd-membrane WGS reactor (PhD)/01 Kinetics and thermodynamics"
+   ]
+  },
+  {
+   "review_id": "R23",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R23"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Supporting"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R23; study type: REVIEW; relevance: Supporting (score 50). File: 10.22079_jmsr.2017.23644.md.",
+    "itemType": "journalArticle",
+    "title": "[title not legible in file]",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Journal of Membrane Science and Research",
+    "volume": "3",
+    "issue": "",
+    "pages": "142-156",
+    "date": "2017"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports"
+   ]
+  },
+  {
+   "review_id": "R25",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R25"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Supporting"
+     }
+    ],
+    "extra": "Review ID: R25; study type: REVIEW; relevance: Supporting (score 45). File: processes-04-00037.md.",
+    "itemType": "journalArticle",
+    "title": "Process intensification in fuel cell CHP systems, the ReforCELL project",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Viviente",
+      "firstName": "J.L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Escribano",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Manzolini",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Stange",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Tregambe",
+      "firstName": "C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Roses",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Koekkoek",
+      "firstName": "A.J.J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Guignard",
+      "firstName": "C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Dauriat",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Processes",
+    "volume": "4",
+    "issue": "",
+    "pages": "37",
+    "date": "2016",
+    "DOI": "10.3390/pr4040037"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports"
+   ]
+  },
+  {
+   "review_id": "R20",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R20"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "preprint-not-peer-reviewed"
+     }
+    ],
+    "extra": "Review ID: R20; study type: SIM; relevance: Low (score 35). File: preprints202504.0349.v1.md.",
+    "itemType": "preprint",
+    "title": "Segmented plug flow reactor modeling of hydrogen separation from syngas in palladium membrane reactors under different operational conditions",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Marzouk",
+      "firstName": "O.A."
+     }
+    ],
+    "repository": "Preprints.org",
+    "date": "2025-04-04",
+    "DOI": "10.20944/preprints202504.0349.v1"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)"
+   ]
+  },
+  {
+   "review_id": "R29",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R29"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R29; study type: EXP; relevance: Low (score 35). File: Membrane reformer technology for sustainable hydrogen production from hydrocarbon feedstocks.md. Journal details from running header only.",
+    "itemType": "journalArticle",
+    "title": "Membrane reformer technology for sustainable hydrogen production from hydrocarbon feedstocks",
+    "creators": [],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "140",
+    "issue": "",
+    "pages": "1203-1211",
+    "date": "2025"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R38",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R38"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R38; study type: EXP; relevance: Low (score 35). File: processes-12-00040.pdf.",
+    "itemType": "journalArticle",
+    "title": "Intensification of hydrogen production: Pd-Ag membrane on tailored Hastelloy-X filter for membrane-assisted steam methane reforming",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Agnolin",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Di Felice",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Llosa Tanco",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ververs",
+      "firstName": "W.J.R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Processes",
+    "volume": "12",
+    "issue": "",
+    "pages": "40",
+    "date": "2024",
+    "DOI": "10.3390/pr12010040"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R27",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R27"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R27; study type: REVIEW; relevance: Low (score 30). File: 01614940.2015.1099882.md.",
+    "itemType": "journalArticle",
+    "title": "Advances on methane steam reforming to produce hydrogen through membrane reactors technology: A review",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Iulianelli",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Liguori",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Wilcox",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Basile",
+      "firstName": "A."
+     }
+    ],
+    "publicationTitle": "Catalysis Reviews",
+    "volume": "58",
+    "issue": "1",
+    "pages": "1-35",
+    "date": "2016",
+    "DOI": "10.1080/01614940.2015.1099882"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports",
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R32",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R32"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R32; study type: SIM; relevance: Low (score 30). File: 1-s2.0-S0009250921008496-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Theoretical calculations and CFD simulations of membrane reactor designs",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Huang",
+      "firstName": "H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Samsun",
+      "firstName": "R.C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Peters",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Stolten",
+      "firstName": "D."
+     }
+    ],
+    "publicationTitle": "Chemical Engineering Science",
+    "volume": "252",
+    "issue": "",
+    "pages": "117284",
+    "date": "2022",
+    "DOI": "10.1016/j.ces.2021.117284"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)"
+   ]
+  },
+  {
+   "review_id": "R35",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R35"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R35; study type: EXP; relevance: Low (score 30). File: 1-s2.0-S0378382021000515-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "H2 production via ammonia decomposition in a catalytic membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Cechetto",
+      "firstName": "V."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Di Felice",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Medrano",
+      "firstName": "J.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Makhloufi",
+      "firstName": "C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Zuniga",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Fuel Processing Technology",
+    "volume": "216",
+    "issue": "",
+    "pages": "106772",
+    "date": "2021",
+    "DOI": "10.1016/j.fuproc.2021.106772"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R37",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R37"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R37; study type: EXP; relevance: Low (score 30). File: catalysts-13-00920.pdf.",
+    "itemType": "journalArticle",
+    "title": "Metallic supported Pd-Ag membranes for simultaneous ammonia decomposition and H2 separation in a membrane reactor: experimental proof of concept",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Cechetto",
+      "firstName": "V."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Agnolin",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Di Felice",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Llosa Tanco",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     }
+    ],
+    "publicationTitle": "Catalysts",
+    "volume": "13",
+    "issue": "",
+    "pages": "920",
+    "date": "2023",
+    "DOI": "10.3390/catal13060920"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R39",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R39"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R39; study type: EXP; relevance: Low (score 30). File: Enhancing hydrogen production from methane steam reforming using a palladium-based membrane reactor inserted with triple-helix structure.md.",
+    "itemType": "journalArticle",
+    "title": "Enhancing hydrogen production from methane steam reforming using a palladium-based membrane reactor inserted with triple-helix structure",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Tang",
+      "firstName": "X.-Y."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Li",
+      "firstName": "J.-C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Liu",
+      "firstName": "Z.-B."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Xia",
+      "firstName": "S.-S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Yang",
+      "firstName": "W.-W."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "He",
+      "firstName": "Y.-L."
+     }
+    ],
+    "publicationTitle": "Energy",
+    "volume": "344",
+    "issue": "",
+    "pages": "140143",
+    "date": "2026",
+    "DOI": "10.1016/j.energy.2026.140143"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R21",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R21"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R21; study type: SIM; relevance: Low (score 25). File: 10.1515_cppm-2015-0064.md.",
+    "itemType": "journalArticle",
+    "title": "CFD simulation of hydrogen separation in Pd hollow fiber membrane",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Mansourpour",
+      "firstName": "Z."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ziaei-Halimejani",
+      "firstName": "H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sadeghnejad",
+      "firstName": "S.M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Boskabadi",
+      "firstName": "M."
+     }
+    ],
+    "publicationTitle": "Chemical Product and Process Modeling",
+    "volume": "11",
+    "issue": "1",
+    "pages": "83-88",
+    "date": "2016",
+    "DOI": "10.1515/cppm-2015-0064"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/05 Reactor models (1D, 2D, CFD)"
+   ]
+  },
+  {
+   "review_id": "R26",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R26"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R26; study type: REVIEW; relevance: Low (score 25). File: membranes-09-00025-v2.md.",
+    "itemType": "journalArticle",
+    "title": "Pd-based membranes: overview and perspectives",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Peters",
+      "firstName": "T."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     }
+    ],
+    "publicationTitle": "Membranes",
+    "volume": "9",
+    "issue": "",
+    "pages": "25",
+    "date": "2019",
+    "DOI": "10.3390/membranes9020025"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/07 Reviews, chapters and project reports",
+    "Pd-membrane WGS reactor (PhD)/02 Membrane permeation parameters"
+   ]
+  },
+  {
+   "review_id": "R33",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R33"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R33; study type: MIXED; relevance: Low (score 25). File: 1-s2.0-S026387621500043X-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Dual-enhanced steam methane reforming by membrane separation of H2 and reactive sorption of CO2",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Wu",
+      "firstName": "X."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Wu",
+      "firstName": "C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Wu",
+      "firstName": "S."
+     }
+    ],
+    "publicationTitle": "Chemical Engineering Research and Design",
+    "volume": "96",
+    "issue": "",
+    "pages": "150-157",
+    "date": "2015",
+    "DOI": "10.1016/j.cherd.2015.02.010"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R40",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R40"
+     },
+     {
+      "tag": "type:EXP"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R40; study type: EXP; relevance: Low (score 25). File: Experimental investigation of double-stage membrane reformer (DSMR) for enhanced hydrogen production via methanol steam reforming.md. Journal details from running header only.",
+    "itemType": "journalArticle",
+    "title": "Experimental investigation of double-stage membrane reformer (DSMR) for enhanced hydrogen production via methanol steam reforming",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Kumar",
+      "firstName": "K."
+     }
+    ],
+    "publicationTitle": "Journal of the Energy Institute",
+    "volume": "123",
+    "issue": "",
+    "pages": "102236",
+    "date": "2025"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R41",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R41"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R41; study type: MIXED; relevance: Low (score 25). File: An integrated methanol reforming–membrane reactor with alternative CO removal routes for permeated hydrogen production_ experiment and multiscale modeling.md. Journal details from running header only.",
+    "itemType": "journalArticle",
+    "title": "An integrated methanol reforming-membrane reactor with alternative CO removal routes for permeated hydrogen production: experiment and multiscale modeling",
+    "creators": [],
+    "publicationTitle": "Journal of the Energy Institute",
+    "volume": "129",
+    "issue": "",
+    "pages": "102702",
+    "date": "2026"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R42",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R42"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R42; study type: SIM; relevance: Low (score 25). File: Hydrogen production through intensified steam methane reforming and hydrogen separation in a membrane rector_ Process modeling, optimization, and scaling-up.md. Journal details from running header only.",
+    "itemType": "journalArticle",
+    "title": "Hydrogen production through intensified steam methane reforming and hydrogen separation in a membrane reactor: Process modeling, optimization, and scaling-up",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Alrshdan",
+      "firstName": "M.M."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "162",
+    "issue": "",
+    "pages": "150705",
+    "date": "2025"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R43",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R43"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "metadata-unverified"
+     }
+    ],
+    "extra": "Review ID: R43; study type: SIM; relevance: Low (score 25). File: Modeling and comprehensive analysis of hydrogen production in a newly designed steam methane reformer with membrane system.md. Journal details from running header only.",
+    "itemType": "journalArticle",
+    "title": "Modeling and comprehensive analysis of hydrogen production in a newly designed steam methane reformer with membrane system",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Saif Ullah",
+      "firstName": "K."
+     }
+    ],
+    "publicationTitle": "Computers and Chemical Engineering",
+    "volume": "175",
+    "issue": "",
+    "pages": "108278",
+    "date": "2023"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R36",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R36"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R36; study type: SIM; relevance: Low (score 20). File: 1-s2.0-S0920586123001542-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Modeling of reverse water-gas shift reaction in a membrane integrated microreactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Ince",
+      "firstName": "M.C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Koybasi",
+      "firstName": "H.H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Avci",
+      "firstName": "A.K."
+     }
+    ],
+    "publicationTitle": "Catalysis Today",
+    "volume": "418",
+    "issue": "",
+    "pages": "114130",
+    "date": "2023",
+    "DOI": "10.1016/j.cattod.2023.114130"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R44",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R44"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R44; study type: SIM; relevance: Low (score 20). File: MS_Thesis_25_DEC.pdf.",
+    "itemType": "thesis",
+    "title": "Process intensification of hydrogen production via steam methane reforming with palladium membrane technology",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Al-Rashdan",
+      "firstName": "M.M."
+     }
+    ],
+    "thesisType": "MS thesis",
+    "university": "KFUPM",
+    "date": "2024"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/08 Reforming and other reactions (membrane practice only)"
+   ]
+  },
+  {
+   "review_id": "R28",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R28"
+     },
+     {
+      "tag": "type:REVIEW"
+     },
+     {
+      "tag": "tier:Low"
+     }
+    ],
+    "extra": "Review ID: R28; study type: REVIEW; relevance: Low (score 15). File: 1-s2.0-S2590174526000280-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Navigating towards efuel: A scientometric insight into the application of membrane reactors",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Yeassin",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Chowdhury",
+      "firstName": "P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Das",
+      "firstName": "P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Agyekum",
+      "firstName": "E.B."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Farrok",
+      "firstName": "O."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kumar",
+      "firstName": "P."
+     }
+    ],
+    "publicationTitle": "Energy Conversion and Management: X",
+    "volume": "30",
+    "issue": "",
+    "pages": "101545",
+    "date": "2026",
+    "DOI": "10.1016/j.ecmx.2026.101545"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/10 Excluded (off-topic)"
+   ]
+  },
+  {
+   "review_id": "R31",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R31"
+     },
+     {
+      "tag": "type:MIXED"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "off-topic"
+     }
+    ],
+    "extra": "Review ID: R31; study type: MIXED; relevance: Low (off-topic) (score 10). File: 1-s2.0-S0009250919301770-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Continuous flow aerobic oxidation of benzyl alcohol on Ru/Al2O3 catalyst in a flat membrane microchannel reactor: An experimental and modelling study",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Wu",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Cao",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ellis",
+      "firstName": "P."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Constantinou",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kuhn",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gavriilidis",
+      "firstName": "A."
+     }
+    ],
+    "publicationTitle": "Chemical Engineering Science",
+    "volume": "201",
+    "issue": "",
+    "pages": "386-396",
+    "date": "2019",
+    "DOI": "10.1016/j.ces.2019.02.015"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/10 Excluded (off-topic)"
+   ]
+  },
+  {
+   "review_id": "R34",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R34"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "off-topic"
+     }
+    ],
+    "extra": "Review ID: R34; study type: SIM; relevance: Low (off-topic) (score 10). File: 1-s2.0-S0360319914025221-main.pdf.",
+    "itemType": "journalArticle",
+    "title": "Simulation of hydrogen and propylene coproduction in catalytic membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Shelepova",
+      "firstName": "E.V."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Vedyagin",
+      "firstName": "A.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Mishakov",
+      "firstName": "I.V."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Noskov",
+      "firstName": "A.S."
+     }
+    ],
+    "publicationTitle": "International Journal of Hydrogen Energy",
+    "volume": "40",
+    "issue": "",
+    "pages": "3592-3598",
+    "date": "2015",
+    "DOI": "10.1016/j.ijhydene.2014.09.004"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/10 Excluded (off-topic)"
+   ]
+  },
+  {
+   "review_id": "R45",
+   "item": {
+    "tags": [
+     {
+      "tag": "id:R45"
+     },
+     {
+      "tag": "type:SIM"
+     },
+     {
+      "tag": "tier:Low"
+     },
+     {
+      "tag": "off-topic"
+     }
+    ],
+    "extra": "Review ID: R45; study type: SIM; relevance: Low (off-topic) (score 5). File: Elmanakhly_Faris.pdf.",
+    "itemType": "thesis",
+    "title": "Co-production of hydrogen and ethylene in an oxygen permeable membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Elmanakhly",
+      "firstName": "F.I."
+     }
+    ],
+    "thesisType": "MASc thesis",
+    "university": "University of Waterloo",
+    "date": "2022"
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/10 Excluded (off-topic)"
+   ]
+  },
+  {
+   "review_id": "T01",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Kinetics of high-temperature water-gas shift reaction over two iron-based commercial catalysts using simulated coal-derived syngases",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hla",
+      "firstName": "S.S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Park",
+      "firstName": "D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Duffy",
+      "firstName": "G.J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Edwards",
+      "firstName": "J.H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Roberts",
+      "firstName": "D.G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ilyushechkin",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Morpeth",
+      "firstName": "L.D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Nguyen",
+      "firstName": "T."
+     }
+    ],
+    "publicationTitle": "Chem. Eng. J.",
+    "volume": "146",
+    "issue": "",
+    "pages": "148-154",
+    "date": "2009",
+    "extra": "Cited in supplied files: R08 [31]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Primary source of the most-used HT power law (R08; via Adams & Barton in R19; via Koc in R12). Check whether it already covers high CO (G4) and the pressure units.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:1"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T02",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Investigation of the effect of total pressure on performance of the catalytic water-gas shift reaction using simulated coal-derived syngases",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hla",
+      "firstName": "S.S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Duffy",
+      "firstName": "G.J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Morpeth",
+      "firstName": "L.D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Cousins",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Roberts",
+      "firstName": "D.G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Edwards",
+      "firstName": "J.H."
+     }
+    ],
+    "publicationTitle": "Catal. Commun.",
+    "volume": "11",
+    "issue": "",
+    "pages": "272-275",
+    "date": "2009",
+    "extra": "Cited in supplied files: R08 [40]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Basis of the claim that no pressure correction is needed (relevant to 4-5 bar). Conflicts with the F_press factor used in R19.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:2"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T03",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "H2 for PEM-FC: effect of CO in the purification by means of Pd-based membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Scura",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Desalination",
+    "volume": "200",
+    "issue": "1-3",
+    "pages": "239-241",
+    "date": "2006",
+    "extra": "Cited in supplied files: R11 [26]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Source of the conflicting JM 60 µm constants (16.2 mmol, E/R 3098 K) vs R02.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:3"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T04",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Syngas upgrading in a membrane reactor with thin Pd-alloy supported membrane",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Brunetti",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Fernandez",
+      "firstName": "E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Pacheco Tanaka",
+      "firstName": "D.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Gallucci",
+      "firstName": "F."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "40",
+    "issue": "",
+    "pages": "10883-10893",
+    "date": "2015",
+    "extra": "Cited in supplied files: R13 [31]. Transcribed from the citing file's reference list; check against the publisher record. Reason: **Validation dataset**: thin (3.6 µm) Pd-alloy WGS membrane reactor, conversion and recovery vs feed pressure at 400 °C. Used by R13.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:4"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T05",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Hydrogen production from the low temperature water gas shift reaction: kinetics and simulation of the industrial reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Amadeo",
+      "firstName": "N.E."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Laborde",
+      "firstName": "M.A."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "20",
+    "issue": "",
+    "pages": "949-958",
+    "date": "1995",
+    "extra": "Cited in supplied files: R11 [6]; R15 [19]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Primary of the LT LH constants re-used twice. Low priority for your HT range.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:5"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T06",
+   "item": {
+    "itemType": "book",
+    "title": "Catalyst Handbook",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Twigg",
+      "firstName": "M.V."
+     }
+    ],
+    "date": "1989",
+    "publisher": "Wolfe Publishing",
+    "place": "Frome",
+    "extra": "Cited in supplied files: R08 [37]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Keq correlation (agrees with exp(4577.8/T - 4.33) within 1 %).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:6"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T07",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "A process dynamic modeling and control framework for performance assessment of Pd/alloy-based membrane reactors used in hydrogen production",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Koc",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kazantzis",
+      "firstName": "N.K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "Y.H."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "36",
+    "issue": "",
+    "pages": "4934-4951",
+    "date": "2011",
+    "extra": "Cited in supplied files: R08 [19]; R12 [28]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Dynamic Pd membrane-reactor model for WGS. Directly relevant to your dynamic model and to G1. Also the WGS rate source for R12.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:7"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T08",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Process safety aspects in water-gas-shift (WGS) membrane reactors used for pure hydrogen production",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Koc",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Kazantzis",
+      "firstName": "N.K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "Y.H."
+     }
+    ],
+    "publicationTitle": "J. Loss Prev. Process Ind.",
+    "volume": "24",
+    "issue": "",
+    "pages": "852-869",
+    "date": "2011",
+    "extra": "Cited in supplied files: R08 [18]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Safety and start-up envelope for lab design.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:8"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T09",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "A distributed dynamic model of a monolith hydrogen membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Michelsen",
+      "firstName": "F.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Wilhelmsen",
+      "firstName": "Ø."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Zhao",
+      "firstName": "L."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Åsen",
+      "firstName": "K.I."
+     }
+    ],
+    "publicationTitle": "Energy Convers. Manage.",
+    "volume": "67",
+    "issue": "",
+    "pages": "160-170",
+    "date": "2013",
+    "extra": "Cited in supplied files: R08 [26]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Distributed dynamic membrane-reactor model (G1).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:9"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T10",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "A dynamic two-dimensional heterogeneous model for water gas shift reactors",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Adams II",
+      "firstName": "T.A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barton",
+      "firstName": "P.I."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "34",
+    "issue": "",
+    "pages": "8877-8891",
+    "date": "2009",
+    "extra": "Cited in supplied files: R08 [35]; R19 [34]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Dynamic WGS packed-bed model; source of the F_press factor.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:10"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T11",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Decline in hydrogen permeation due to concentration polarization and CO hindrance in a palladium membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hara",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sakaki",
+      "firstName": "K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Itoh",
+      "firstName": "N."
+     }
+    ],
+    "publicationTitle": "Ind. Eng. Chem. Res.",
+    "volume": "38",
+    "issue": "",
+    "pages": "4913-4918",
+    "date": "1999",
+    "extra": "Cited in supplied files: R01 [17]; R30 Ch.4. Transcribed from the citing file's reference list; check against the publisher record. Reason: Separates CP and CO hindrance in a membrane reactor.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:11"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T12",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Influence of steam and carbon dioxide on the hydrogen flux through thin Pd/Ag and Pd membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Gielens",
+      "firstName": "F.C."
+     }
+    ],
+    "publicationTitle": "J. Membr. Sci.",
+    "volume": "279",
+    "issue": "",
+    "pages": "176-185",
+    "date": "2006",
+    "extra": "Cited in supplied files: R01 [14]; R03. Transcribed from the citing file's reference list; check against the publisher record. Reason: Steam and CO2 effects on thin films (G3).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:12"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T13",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "The effect of CO and steam on the H2 permeability of a Pd/stainless steel membrane",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Li",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Liang",
+      "firstName": "W."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Hughes",
+      "firstName": "R."
+     }
+    ],
+    "publicationTitle": "J. Membr. Sci.",
+    "volume": "165",
+    "issue": "",
+    "pages": "135-141",
+    "date": "2000",
+    "extra": "Cited in supplied files: R01 [10]. Transcribed from the citing file's reference list; check against the publisher record. Reason: CO + steam inhibition (G2, G3).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:13"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T14",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "The effect of external mass transfer, competitive adsorption and coking permeation through thin Pd/Ag membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hou",
+      "firstName": "K."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Hughes",
+      "firstName": "R."
+     }
+    ],
+    "publicationTitle": "J. Membr. Sci.",
+    "volume": "206",
+    "issue": "",
+    "pages": "119-130",
+    "date": "2002",
+    "extra": "Cited in supplied files: R01 [9]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Competitive adsorption of CO, H2O and CO2 plus external mass transfer.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:14"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T15",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Concentration polarization analysis in self-supported Pd-based membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Sep. Purif. Technol.",
+    "volume": "66",
+    "issue": "",
+    "pages": "613-624",
+    "date": "2009",
+    "extra": "Cited in supplied files: R13 [2]. Transcribed from the citing file's reference list; check against the publisher record. Reason: CP model basis.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:15"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T16",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Correct evaluation of the effective concentration polarization influence in membrane-assisted devices. Case study: H2 production by water gas shift in Pd-membrane reactors",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Caravella",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sun",
+      "firstName": "Y."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "",
+    "issue": "",
+    "pages": "",
+    "date": "2015",
+    "extra": "Cited in supplied files: R13 [42]. Transcribed from the citing file's reference list; check against the publisher record. Reason: EAC metric for WGS.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:16"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T17",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Pressure-dependent hydrogen permeability extended for metal membranes not obeying the square-root law",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Hara",
+      "firstName": "S."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Ishitsuka",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Suda",
+      "firstName": "H."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Mukaida",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Haraya",
+      "firstName": "K."
+     }
+    ],
+    "publicationTitle": "J. Phys. Chem. B",
+    "volume": "113",
+    "issue": "",
+    "pages": "9795-9801",
+    "date": "2009",
+    "extra": "Cited in supplied files: R13 [35]; R26. Transcribed from the citing file's reference list; check against the publisher record. Reason: Non-ideal n > 0.5 behaviour (R06, R07).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:17"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T18",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Influence of the gas phase resistance on hydrogen flux through thin palladium-silver membranes",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Catalano",
+      "firstName": "J."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Giacinti Baschetti",
+      "firstName": "M."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sarti",
+      "firstName": "G.C."
+     }
+    ],
+    "publicationTitle": "J. Membr. Sci.",
+    "volume": "339",
+    "issue": "",
+    "pages": "57-67",
+    "date": "2009",
+    "extra": "Cited in supplied files: R06; R07; R16. Transcribed from the citing file's reference list; check against the publisher record. Reason: Gas-phase resistance with thin Pd-Ag.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:18"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T19",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Effective approximations for concentration-polarization in Pd-membrane separators",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Nekhamkina",
+      "firstName": "O."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Sheintuch",
+      "firstName": "M."
+     }
+    ],
+    "publicationTitle": "Chem. Eng. J.",
+    "volume": "260",
+    "issue": "",
+    "pages": "835-845",
+    "date": "2015",
+    "extra": "Cited in supplied files: R30 Ch.4. Transcribed from the citing file's reference list; check against the publisher record. Reason: CP criterion (Γ > 6) usable in a 1D model.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:19"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T20",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "An analysis of the performance of membrane reactors for the water-gas shift reaction using gas feed mixtures",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Criscuoli",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Basile",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Catal. Today",
+    "volume": "56",
+    "issue": "",
+    "pages": "53-64",
+    "date": "2000",
+    "extra": "Cited in supplied files: R14 [5]; R16. Transcribed from the citing file's reference list; check against the publisher record. Reason: Dataset used to validate R16 (3 feed mixtures incl. 27 % CO).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:20"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T21",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "An innovative configuration of a Pd-based membrane reactor for the production of pure hydrogen: experimental analysis of water gas shift",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Brunetti",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Tricoli",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "J. Power Sources",
+    "volume": "182",
+    "issue": "",
+    "pages": "160-167",
+    "date": "2008",
+    "extra": "Cited in supplied files: R11 [8]; R04; R16; R17; R30. Transcribed from the citing file's reference list; check against the publisher record. Reason: WGS membrane-reactor experiments with a self-supported Pd-Ag membrane up to 10 bar.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:21"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T22",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Upgrading of a syngas mixture for pure hydrogen production in a Pd-Ag membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Brunetti",
+      "firstName": "A."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Barbieri",
+      "firstName": "G."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Drioli",
+      "firstName": "E."
+     }
+    ],
+    "publicationTitle": "Chem. Eng. Sci.",
+    "volume": "64",
+    "issue": "",
+    "pages": "3448-3454",
+    "date": "2009",
+    "extra": "Cited in supplied files: R11 [19]; R16. Transcribed from the citing file's reference list; check against the publisher record. Reason: Syngas WGS membrane-reactor data.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:22"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T23",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Experimental and modeling studies on the low-temperature water-gas shift reaction in a dense Pd-Ag packed-bed membrane reactor",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Mendes",
+      "firstName": "D."
+     }
+    ],
+    "publicationTitle": "Chem. Eng. Sci.",
+    "volume": "66",
+    "issue": "",
+    "pages": "2356-2367",
+    "date": "2011",
+    "extra": "Cited in supplied files: R17 [30]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Validation data used by R17 (LT).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:23"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T24",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Performance and economics of a Pd-based planar WGS membrane reactor for coal gasification",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Dolan",
+      "firstName": "M.D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Donelson",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Dave",
+      "firstName": "N.C."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "35",
+    "issue": "",
+    "pages": "10994-11003",
+    "date": "2010",
+    "extra": "Cited in supplied files: R08 [1]; R17; R30. Transcribed from the citing file's reference list; check against the publisher record. Reason: WGS membrane-reactor performance with coal syngas (high CO).",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:24"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T25",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Assessing high-temperature water-gas shift membrane reactors",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Ma",
+      "firstName": "D."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Lund",
+      "firstName": "C.R.F."
+     }
+    ],
+    "publicationTitle": "Ind. Eng. Chem. Res.",
+    "volume": "42",
+    "issue": "",
+    "pages": "711",
+    "date": "2003",
+    "extra": "Cited in supplied files: R15 [1]. Transcribed from the citing file's reference list; check against the publisher record. Reason: Role of CO2 rate inhibition on Fe-Cr catalysts in Pd membrane reactors.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:25"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  },
+  {
+   "review_id": "T26",
+   "item": {
+    "itemType": "journalArticle",
+    "title": "Parametric study of membrane reactors for hydrogen production via high-temperature water gas shift reaction",
+    "creators": [
+     {
+      "creatorType": "author",
+      "lastName": "Chein",
+      "firstName": "R."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Chen",
+      "firstName": "Y.-C."
+     },
+     {
+      "creatorType": "author",
+      "lastName": "Chung",
+      "firstName": "J.N."
+     }
+    ],
+    "publicationTitle": "Int. J. Hydrogen Energy",
+    "volume": "38",
+    "issue": "",
+    "pages": "2292-2305",
+    "date": "2013",
+    "extra": "Cited in supplied files: R08 [17]. Transcribed from the citing file's reference list; check against the publisher record. Reason: 2D HT-WGS membrane-reactor model using the Hla kinetics.",
+    "tags": [
+     {
+      "tag": "to-retrieve"
+     },
+     {
+      "tag": "metadata-unverified"
+     },
+     {
+      "tag": "retrieval-no:26"
+     }
+    ]
+   },
+   "collections": [
+    "Pd-membrane WGS reactor (PhD)/09 To retrieve (cited in corpus, not supplied)"
+   ]
+  }
+ ]
+}

@@ -76,7 +76,7 @@ def K_wgs(T):
 
 
 def K_wgs_moe(T):
-    """Empirical K_eq = exp(4577.8/T - 4.33), as printed in Karagoz et al. (2020).
+    """Empirical K_eq = exp(4577.8/T - 4.33), Moe (1962), as quoted by Helmi et al. (2016).
 
     Used only as an independent cross-check of the Cantera value.
     """
