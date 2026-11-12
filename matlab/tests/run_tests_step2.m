@@ -12,8 +12,8 @@ p = load_params();
 % 2. missing value stops a run
 ok = false; try, pget(p, 'membrane.M4.Q0'); catch e, ok = strcmp(e.identifier, 'pget:missing'); end
 [np, nf] = check(np, nf, ok, 'pget stops on a null value (M4 pre-exponential)');
-ok = false; try, pget(p, 'rate.G2.pressure_unit'); catch e, ok = strcmp(e.identifier, 'pget:missing'); end
-[np, nf] = check(np, nf, ok, 'pget stops on G2 pressure unit (not stated)');
+[np, nf] = check(np, nf, strcmp(p.rate.G2.pressure_unit.kind, 'inferred') && strcmp(pget(p,'rate.G2.pressure_unit'), 'kPa'), 'G2 pressure unit is kPa and labelled inferred');
+[np, nf] = check(np, nf, strcmp(p.rate.K1.conc_basis_used.kind, 'inferred') && strcmp(pget(p,'rate.K1.conc_basis_used'), 'mol cm-3'), 'K1 concentration basis is mol cm-3 and labelled inferred');
 
 % 3. permeance of each option at 400 C, unit driving force (review table 3C)
 T = 673.15;
@@ -46,8 +46,32 @@ c = pbmr_const();
 [np, nf] = check(np, nf, relerr(pget(p,'rate.K1.E')/c.R, pget(p,'rate.G1.E_over_R')) < 1e-3, 'K1 E/R equals G1 E/R within 0.1 %');
 cs = pget(p,'cases.hla2015.catalyst_mass_no_membrane'); is = pget(p,'cases.hla2015.inert_mass_no_membrane');
 [np, nf] = check(np, nf, all(abs(cs./(cs+is) - 0.095) < 0.002), 'Hla Table 3: catalyst is 9.5 wt % in all three loadings');
-f = pget(p,'cases.target.test_feed_mmol_s');
-[np, nf] = check(np, nf, abs(f.CO/(f.CO+f.CO2+f.H2+f.CH4+f.N2) - 0.40) < 1e-12, 'target test feed is 40 % CO dry');
+sp = {'CO','CO2','H2','CH4','N2'}; fd = cellfun(@(s) pget(p, ['cases.target.test_feed_mmol_s.' s]), sp);
+[np, nf] = check(np, nf, abs(fd(1)/sum(fd) - 0.40) < 1e-12, 'target test feed is 40 % CO dry');
+[np, nf] = check(np, nf, isequal(size(p.rate.K1.validity.T_K), [2 1]), 'validity ranges load as [min; max]');
+
+% 8. relations resolve and sweep bounds are ordered
+lv = collect_leaves(p, '');
+badrel = {}; nrel = 0; badsw = {};
+for k = 1:numel(lv)
+    L = lv{k}.leaf;
+    if ~isempty(L.related)
+        items = strsplit(L.related, ';');
+        for q = 1:numel(items)
+            ty = strsplit(strtrim(items{q}), ':'); tgt = strjoin(ty(2:end), ':'); nrel = nrel + 1;
+            top = strsplit(tgt, '.'); 
+            if isfield(p, top{1}) && ~has_path(p, tgt), badrel{end+1} = [lv{k}.id(2:end) ' -> ' tgt]; end %#ok<AGROW>
+        end
+    end
+    if ~isempty(L.sweep) && ~(L.sweep(1) < L.sweep(2)), badsw{end+1} = lv{k}.id; end %#ok<AGROW>
+end
+[np, nf] = check(np, nf, isempty(badrel), sprintf('all %d relation links resolve  %s', nrel, strjoin(badrel, ', ')));
+[np, nf] = check(np, nf, isempty(badsw), 'sweep bounds are ordered');
+r = sweep_range(p, 'sweep.U_wall');
+[np, nf] = check(np, nf, isequal(r, [0; 300]), 'sweep_range returns [0;300] for sweep.U_wall');
+ok = false; try, sweep_range(p, 'rate.K1.E'); catch e, ok = strcmp(e.identifier, 'sweep_range:none'); end
+[np, nf] = check(np, nf, ok, 'sweep_range stops where no bounds are recorded');
+[np, nf] = check(np, nf, isempty(p.sweep.U_wall.value) && strcmp(p.sweep.U_wall.kind, 'sweep'), 'swept parameters have no single value and kind = sweep');
 
 fprintf('--- %d passed, %d failed ---\n', np, nf);
 if nf == 0, fprintf('ALL STEP 2 TESTS PASSED\n'); else, error('Step 2 tests failed'); end
@@ -76,4 +100,28 @@ if isstruct(s) && isscalar(s)
         bad = [bad, b]; n = n + m; %#ok<AGROW>
     end
 end
+end
+
+function lv = collect_leaves(s, path)
+lv = {};
+if isstruct(s) && isfield(s, 'value')
+    lv = {struct('id', path, 'leaf', s)}; return
+end
+if isstruct(s) && isscalar(s)
+    fn = fieldnames(s);
+    for k = 1:numel(fn)
+        if any(strcmp(fn{k}, {'validity'})), continue; end
+        sub = collect_leaves(s.(fn{k}), [path '.' fn{k}]);
+        lv = [lv, sub]; %#ok<AGROW>
+    end
+end
+end
+
+function ok = has_path(p, path)
+parts = strsplit(path, '.'); x = p; ok = true;
+for k = 1:numel(parts)
+    if ~isstruct(x) || ~isfield(x, parts{k}), ok = false; return; end
+    x = x.(parts{k});
+end
+ok = isstruct(x) && isfield(x, 'value');
 end
