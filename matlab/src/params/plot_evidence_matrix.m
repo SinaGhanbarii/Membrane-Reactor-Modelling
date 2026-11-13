@@ -18,7 +18,7 @@ rows = {
   'Catalyst (Hla 2015)',   'catalyst.Hla2015', {'rho_p','rho_p'; 'cp','cp'; 'k (catalyst)','k'; 'd_p','d_p'; 'identity','catalyst_identity'}
   'Reactor (Hla 2015 case)', 'cases.hla2015', {'shell ID','shell_inner_diameter'; 'voidage','bed_voidage'; 'membrane area','membrane_area'; 'steam/carbon','steam_to_carbon'}
   'Reactor (target case)', 'cases.target', {'geometry','geometry'}
-  'Swept parameters',      'sweep',     {'U wall','U_wall'; 'd_p','d_p'; 'delta','delta_membrane'; 'voidage','bed_voidage'}
+  'Swept parameters',      'sweep',     {'U wall','U_wall'; 'd_p','d_p'; 'D_eff','D_eff'; 'delta','delta_membrane'; 'voidage','bed_voidage'}
 };
 cols = {};
 for r = 1:size(rows,1)
