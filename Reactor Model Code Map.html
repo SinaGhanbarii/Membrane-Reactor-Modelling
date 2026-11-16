@@ -1,0 +1,252 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Reactor Model Code Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column, a wide layered diagram first, then reading sections. Layers are tinted, the reactor core carries the one strong accent. */
+:root {
+  --bg: #f4f6f7; --panel: #ffffff; --ink: #1b2a33; --mute: #586973; --line: #c3cdd3;
+  --accent: #0d6b78; --accent-soft: #dcf0f2;
+  --l-data: #eceff1; --l-param: #e9eef6; --l-phys: #e6f0fa; --l-core: #dcf0f2; --l-out: #efe9f8;
+  --warn: #8a5a00; --warn-soft: #fbf0d9;
+  --font: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11181d; --panel: #18222a; --ink: #e3ebef; --mute: #98a9b3; --line: #33434d;
+    --accent: #55c2cf; --accent-soft: #15383d;
+    --l-data: #1d282f; --l-param: #1c2836; --l-phys: #1a2a3b; --l-core: #123a40; --l-out: #271f36;
+    --warn: #e3b25a; --warn-soft: #3a2d12; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11181d; --panel: #18222a; --ink: #e3ebef; --mute: #98a9b3; --line: #33434d;
+  --accent: #55c2cf; --accent-soft: #15383d;
+  --l-data: #1d282f; --l-param: #1c2836; --l-phys: #1a2a3b; --l-core: #123a40; --l-out: #271f36;
+  --warn: #e3b25a; --warn-soft: #3a2d12; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.55;
+  padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 1040px; margin: 0 auto; display: grid; gap: 36px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 6px; font-weight: 600; text-wrap: balance; }
+h2 { font-size: 18px; margin: 0 0 10px; font-weight: 600; }
+.lede { color: var(--mute); margin: 0; max-width: 70ch; }
+.tag { font-family: var(--mono); font-size: 12px; color: var(--mute); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 8px; }
+p { margin: 0 0 10px; max-width: 72ch; }
+code, .m { font-family: var(--mono); font-size: 13px; }
+code { background: var(--l-data); padding: 1px 5px; border-radius: 3px; }
+.scroll { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px; }
+svg { display: block; min-width: 900px; width: 100%; height: auto; }
+svg text { fill: var(--ink); font-family: var(--font); }
+.row { font-size: 10.5px; letter-spacing: .1em; fill: var(--mute) !important; font-family: var(--mono); }
+.bx { stroke: var(--line); stroke-width: 1; }
+.bx.core { stroke: var(--accent); stroke-width: 1.6; }
+.ti { font-family: var(--mono); font-size: 13px; font-weight: 600; }
+.su { font-size: 11.5px; fill: var(--mute) !important; }
+.ln { stroke: var(--mute); stroke-width: 1.3; fill: none; }
+.ar { fill: var(--mute); }
+.note { font-size: 11px; fill: var(--mute) !important; font-style: italic; }
+ol.steps { margin: 0; padding-left: 22px; display: grid; gap: 10px; max-width: 78ch; }
+ol.steps li::marker { font-family: var(--mono); color: var(--accent); font-weight: 600; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; background: var(--panel); border: 1px solid var(--line); font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--mute); font-weight: 600; background: var(--l-data); }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+pre { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; overflow-x: auto; font-family: var(--mono); font-size: 12.5px; line-height: 1.6; }
+pre .c { color: var(--mute); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; min-width: 0; }
+.card h3 { margin: 0 0 6px; font-size: 14px; }
+.card p { font-size: 14px; margin-bottom: 0; }
+.status { background: var(--warn-soft); color: var(--ink); border: 1px solid var(--warn); border-radius: 6px; padding: 12px 16px; font-size: 14px; max-width: none; }
+.status b { color: var(--warn); }
+</style>
+
+<main>
+  <header>
+    <p class="tag">Membrane and fuel cell integration · stage 1 model · 16 Nov 2026</p>
+    <h1>How the reactor model is built</h1>
+    <p class="lede">A 1D MATLAB model of a Pd-membrane water-gas shift reactor. Every number comes from one parameter register, every physical closure is its own function, one function solves a case, and the studies and figures are built on that. A separate Python model checks the numbers.</p>
+  </header>
+
+  <section>
+    <p class="tag">Architecture</p>
+    <h2>Five layers, each using only the layers above it</h2>
+    <div class="scroll">
+<svg viewBox="0 0 960 770" role="img" aria-label="Layered architecture of the MATLAB model: data, parameters, physics closures, reactor model, one case, studies and plots">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="ar"/></marker></defs>
+
+  <text class="row" x="0" y="14">DATA</text>
+  <rect class="bx" x="0" y="22" width="465" height="58" rx="4" fill="var(--l-data)"/>
+  <text class="ti" x="12" y="43">params_register.csv</text>
+  <text class="su" x="12" y="60">Every parameter: value, unit, source and kind</text>
+  <text class="su" x="12" y="73">kind: reported, calculated, assumed, inferred, placeholder, sweep, range</text>
+  <rect class="bx" x="495" y="22" width="465" height="58" rx="4" fill="var(--l-data)"/>
+  <text class="ti" x="507" y="43">nasa7_species.json</text>
+  <text class="su" x="507" y="60">NASA polynomials for CO, H₂O, CO₂, H₂, CH₄, N₂</text>
+  <path class="ln" d="M232 80V118" marker-end="url(#a)"/><path class="ln" d="M727 80V118" marker-end="url(#a)"/>
+
+  <text class="row" x="0" y="112">PARAMETERS AND CONSTANTS</text>
+  <rect class="bx" x="0" y="124" width="300" height="58" rx="4" fill="var(--l-param)"/>
+  <text class="ti" x="12" y="145">load_params · pget</text>
+  <text class="su" x="12" y="162">Read the register into a struct p; pget stops</text>
+  <text class="su" x="12" y="175">if a value has no source (never a silent default)</text>
+  <rect class="bx" x="330" y="124" width="300" height="58" rx="4" fill="var(--l-param)"/>
+  <text class="ti" x="342" y="145">pbmr_const · load_species</text>
+  <text class="su" x="342" y="162">Species order, stoichiometry, atoms, R;</text>
+  <text class="su" x="342" y="175">load_species reads the NASA file</text>
+  <rect class="bx" x="660" y="124" width="300" height="58" rx="4" fill="var(--l-param)"/>
+  <text class="ti" x="672" y="145">check_validity · sweep_range</text>
+  <text class="su" x="672" y="162">Is the case inside the data range of a value?</text>
+  <text class="su" x="672" y="175">Warns EXTRAPOLATED. sweep_range: bounds</text>
+  <text class="note" x="0" y="208">p, the parameter struct, is passed to every function below.</text>
+
+  <text class="row" x="0" y="232">PHYSICS CLOSURES  (one function per physical effect)</text>
+  <rect class="bx" x="0" y="240" width="300" height="108" rx="4" fill="var(--l-phys)"/>
+  <text class="ti" x="12" y="261">thermo/</text>
+  <text class="su" x="12" y="280">nasa_props: cp and enthalpy</text>
+  <text class="su" x="12" y="295">Keq_nasa, Keq_moe: equilibrium constant</text>
+  <text class="su" x="12" y="310">dH_wgs: heat of reaction</text>
+  <text class="su" x="12" y="325">wgs_equilibrium · co_conversion</text>
+  <text class="su" x="12" y="340">element_flows: C, H, O, N balance</text>
+  <rect class="bx" x="330" y="240" width="300" height="108" rx="4" fill="var(--l-phys)"/>
+  <text class="ti" x="342" y="261">kinetics/</text>
+  <text class="su" x="342" y="280">rate_wgs: rate law K1 or G2, times (1 − β)</text>
+  <text class="su" x="342" y="295">β measures distance from equilibrium</text>
+  <text class="su" x="342" y="310">effectiveness_sphere: η for pore</text>
+  <text class="su" x="342" y="325">diffusion in the particle (optional)</text>
+  <rect class="bx" x="660" y="240" width="300" height="108" rx="4" fill="var(--l-phys)"/>
+  <text class="ti" x="672" y="261">membrane/</text>
+  <text class="su" x="672" y="280">membrane_flux: Sieverts-type H₂ flux</text>
+  <text class="su" x="672" y="295">J = Q · (p_ret^0.5 − p_perm^0.5)</text>
+  <text class="su" x="672" y="310">Optional CO inhibition factor (1 − αθ)</text>
+  <text class="su" x="672" y="325">Options: M7 (4.5 µm), M1 (60 µm), M8, M4</text>
+  <path class="ln" d="M150 348V362H810V382" marker-end="url(#a)"/><path class="ln" d="M480 348V362"/><path class="ln" d="M810 348V362"/>
+
+  <text class="row" x="0" y="376">REACTOR MODEL</text>
+  <rect class="bx" x="0" y="388" width="300" height="148" rx="4" fill="var(--l-core)"/>
+  <text class="ti" x="12" y="409">make_case</text>
+  <text class="su" x="12" y="428">Builds the case struct c</text>
+  <text class="su" x="12" y="443">Defaults from the register</text>
+  <text class="su" x="12" y="458">Overrides (ov) replace fields</text>
+  <text class="su" x="12" y="473">Checks flow, sweep, wall, η, Δp inputs</text>
+  <text class="su" x="12" y="488">Derives bed area, catalyst per m³ bed</text>
+  <rect class="bx" x="330" y="388" width="300" height="148" rx="4" fill="var(--l-core)"/>
+  <text class="ti" x="342" y="409">solvers</text>
+  <text class="su" x="342" y="428">integrate_bed: ode15s along z, 201 points</text>
+  <text class="su" x="342" y="443">solve_cocurrent: permeate starts empty</text>
+  <text class="su" x="342" y="458">solve_countercurrent: fzero finds the</text>
+  <text class="su" x="342" y="473">permeate H₂ flow at z = 0 that makes</text>
+  <text class="su" x="342" y="488">it zero at z = L (sweep gas only)</text>
+  <rect class="bx core" x="660" y="388" width="300" height="148" rx="4" fill="var(--l-core)"/>
+  <text class="ti" x="672" y="409">reactor_rhs   ← the model</text>
+  <text class="su" x="672" y="428">d/dz of y = [F (6 species), G, T, P]</text>
+  <text class="su" x="672" y="443">Reaction: rate × catalyst × bed area</text>
+  <text class="su" x="672" y="458">H₂ leaves through the membrane</text>
+  <text class="su" x="672" y="473">Permeate side: P_perm · G / (G + sweep)</text>
+  <text class="su" x="672" y="488">Energy: isothermal, adiabatic or cooled</text>
+  <text class="su" x="672" y="503">Pressure: Ergun (optional)</text>
+  <text class="su" x="672" y="522">G = H₂ flow in the permeate stream</text>
+  <path class="ln" d="M300 462H330" marker-end="url(#a)"/><path class="ln" d="M630 462H660" marker-end="url(#a)"/>
+  <path class="ln" d="M480 536V578" marker-end="url(#a)"/>
+
+  <text class="row" x="0" y="570">ONE CASE</text>
+  <rect class="bx core" x="0" y="578" width="620" height="66" rx="4" fill="var(--l-out)"/>
+  <text class="ti" x="12" y="599">run_case(p, ov)   one case in, one result out</text>
+  <text class="su" x="12" y="617">sol: profiles along the bed · profile: β, pinch ratio, regime per position</text>
+  <text class="su" x="12" y="632">summary: X_CO, H₂ recovery, permeate H₂ share, atom error, regime fractions, flags</text>
+  <rect class="bx" x="660" y="578" width="300" height="66" rx="4" fill="var(--l-out)"/>
+  <text class="ti" x="672" y="599">regime_labels</text>
+  <text class="su" x="672" y="617">no flux · reaction · pinch · permeance · idle</text>
+  <text class="su" x="672" y="632">(thresholds are proposals, not findings)</text>
+  <path class="ln" d="M660 611H620" marker-end="url(#a)"/>
+  <path class="ln" d="M150 644V692" marker-end="url(#a)"/>
+
+  <text class="row" x="0" y="684">STUDIES AND FIGURES</text>
+  <rect class="bx" x="0" y="692" width="300" height="68" rx="4" fill="var(--l-out)"/>
+  <text class="ti" x="12" y="713">studies/</text>
+  <text class="su" x="12" y="731">study_h5_h6 · study_regimes</text>
+  <text class="su" x="12" y="746">study_h2 · study_sweep: loop over cases</text>
+  <rect class="bx" x="330" y="692" width="300" height="68" rx="4" fill="var(--l-out)"/>
+  <text class="ti" x="342" y="713">results/*.csv</text>
+  <text class="su" x="342" y="731">One file per study</text>
+  <text class="su" x="342" y="746">Kept out of Git</text>
+  <rect class="bx" x="660" y="692" width="300" height="68" rx="4" fill="var(--l-out)"/>
+  <text class="ti" x="672" y="713">plots/</text>
+  <text class="su" x="672" y="731">plot_regime_map reads the CSVs;</text>
+  <text class="su" x="672" y="746">plot_case_profile, plot_flow_compare read a run_case result</text>
+  <path class="ln" d="M300 726H330" marker-end="url(#a)"/><path class="ln" d="M630 726H660" marker-end="url(#a)"/>
+</svg>
+    </div>
+    <p class="lede" style="margin-top:10px">Reading rule: the reactor model never contains a number. It asks the register, through <code>p</code>, so a value changes in one place only.</p>
+  </section>
+
+  <section>
+    <p class="tag">One run</p>
+    <h2>What happens when <code>run_case</code> is called</h2>
+    <ol class="steps">
+      <li><b>Case.</b> <code>make_case</code> takes the register defaults (feed, 400 °C, 4.5 bar, bed geometry, membrane) and replaces any field named in <code>ov</code>. A wrong field name or a bad option stops here with an error.</li>
+      <li><b>Solve.</b> Without a sweep gas, or with co-current flow, <code>integrate_bed</code> runs once with an empty permeate stream. For counter-current with a sweep, <code>fzero</code> repeats that integration until the permeate H₂ flow is zero at the far end.</li>
+      <li><b>Right-hand side.</b> At every position <code>reactor_rhs</code> evaluates the rate (<code>rate_wgs</code>), the H₂ flux (<code>membrane_flux</code>) and the energy balance, and returns the derivative of species flows, permeate flow, temperature and pressure.</li>
+      <li><b>Diagnostics.</b> <code>run_case</code> replays the solution through the same right-hand side to get β, the pinch ratio and the flux at each position, then labels each position with a regime (<code>regime_labels</code>).</li>
+      <li><b>Summary.</b> CO conversion, H₂ recovery, atom balance (C, H, O, N) and the share of the bed in each regime. Flags such as EXTRAPOLATED are attached.</li>
+      <li><b>Studies.</b> A study file loops over cases, calls <code>run_case</code> for each, and writes one table to <code>results/</code>. Figures read those tables.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="tag">Repository</p>
+    <h2>Where things live</h2>
+<pre>Membrane Reactor Modelling/
+├─ matlab/
+│  ├─ data/        params_register.csv, nasa7_species.json
+│  ├─ src/
+│  │  ├─ params/     load_params, pget, check_validity, sweep_range, evidence plots
+│  │  ├─ thermo/     NASA properties, equilibrium, heat of reaction, atom balance
+│  │  ├─ kinetics/   rate_wgs, effectiveness_sphere
+│  │  ├─ membrane/   membrane_flux
+│  │  ├─ reactor/    make_case, reactor_rhs, integrate_bed, solve_*, run_case, regime_labels
+│  │  ├─ studies/    study_h5_h6, study_regimes, study_h2, study_sweep
+│  │  └─ plots/      plot_case_profile, plot_flow_compare, plot_regime_map
+│  └─ tests/       run_tests_step1, step2, step2b, step3, vectors_step1.json
+├─ pbmr1d/         Python thermodynamics (Cantera)
+├─ scripts/        ref_reactor.py (independent Python reactor), export_matlab_reference.py, ...
+├─ tests/          Python tests
+├─ params/         rig_example.yaml  <span class="c">(rig_private.yaml is git-ignored: H2Site data)</span>
+├─ results/        study CSVs and phase 1 report  <span class="c">(ignored by Git)</span>
+└─ docs/           LOG.md, review notes</pre>
+  </section>
+
+  <section>
+    <p class="tag">Checks</p>
+    <h2>How the numbers are checked without rig data</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Test file</th><th>What it checks</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td><code>run_tests_step1</code></td><td>Thermodynamics against values exported from the Python (Cantera) model</td><td class="n">14 of 14</td></tr>
+        <tr><td><code>run_tests_step2</code></td><td>Register and membrane flux</td><td class="n">22 of 22</td></tr>
+        <tr><td><code>run_tests_step2b</code></td><td>Rate laws and effectiveness factor</td><td class="n">22 of 22</td></tr>
+        <tr><td><code>run_tests_step3</code></td><td>Reactor: atom balance, no-membrane equilibrium limit, no-reaction limit, adiabatic energy balance, regimes, sweep gas, counter-current</td><td class="n">40 of 40 (one more check, idle regime, added and not yet run)</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin-top:12px">The reactor numbers are also reproduced by <code>scripts/ref_reactor.py</code>, an independent Python implementation that reads the same register. Agreement shows the MATLAB code solves the stated equations correctly. It does not show the equations describe the rig.</p>
+  </section>
+
+  <section>
+    <p class="tag">Extending it</p>
+    <h2>Where a change goes</h2>
+    <div class="two">
+      <div class="card"><h3>A new rate law</h3><p>Add its constants to the register, then a branch in <code>rate_wgs</code>. The reactor code does not change.</p></div>
+      <div class="card"><h3>A new membrane</h3><p>Add its permeance parameters to the register and make <code>membrane_flux</code> accept the new name. Select it with <code>struct('membrane', 'M1')</code>-style overrides.</p></div>
+      <div class="card"><h3>Test-rig data</h3><p>Enter measured values in the register as reported entries with their source, rerun the studies, and compare outlet conversion and recovery.</p></div>
+      <div class="card"><h3>Concentration polarisation (H3)</h3><p>Left out of the 1D model by decision and to be studied in the 2D CFD (OpenFOAM) model. Thin-membrane results from the 1D model are labelled flux-favourable.</p></div>
+    </div>
+  </section>
+
+  <p class="status"><b>Status.</b> This is an unvalidated model. The M7 flux is extrapolated from 1.2–1.6 bar to 4–5 bar, the rate-law unit bases are inferred, and wall heat transfer, bed voidage and effective diffusivity are assumed. Results are model predictions until they are compared with test-rig data.</p>
+</main>
+
+</body></html>
