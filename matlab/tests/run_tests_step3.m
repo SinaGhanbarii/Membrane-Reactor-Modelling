@@ -106,6 +106,62 @@ co5 = run_case(p, struct('sweep', 5e-3)).summary;
 idl = cc1.summary.regime_fraction(5);
 [np, nf] = check(np, nf, abs(idl - 0.438) < 0.03, sprintf('counter-current, 1 mmol/s sweep: %.3f of the bed is idle (Python 0.438)', idl));
 
+% 8. back-permeation (reference values from scripts/ref_reactor.py logic, equal-pressure case)
+eqp = struct('T_in', 673.15, 'L', 0.6, 'P_perm', 4.5 * 1.01325e5, 'sweep', 1e-3, 'flow', 'counter');
+bp_on = run_case(p, eqp).summary;
+bp_off = run_case(p, setfield(eqp, 'backperm', 'off')).summary;
+[np, nf] = check(np, nf, abs(bp_off.X_CO - 0.946473) < 2e-4 && abs(bp_off.H2_recovery - 0.596977) < 2e-4 && abs(bp_off.permeate_H2_fraction - 0.309265) < 2e-4, sprintf('permeate at retentate pressure, backperm off: X_CO %.4f, recovery %.4f, share %.4f', bp_off.X_CO, bp_off.H2_recovery, bp_off.permeate_H2_fraction));
+[np, nf] = check(np, nf, abs(bp_on.X_CO - 0.940840) < 2e-4 && abs(bp_on.H2_recovery - 0.546486) < 2e-4 && abs(bp_on.permeate_H2_fraction - 0.290712) < 2e-4, sprintf('permeate at retentate pressure, backperm on: X_CO %.4f, recovery %.4f, share %.4f', bp_on.X_CO, bp_on.H2_recovery, bp_on.permeate_H2_fraction));
+[np, nf] = check(np, nf, abs(bp_on.reverse_flux_fraction - 0.169) < 0.02 && bp_off.reverse_flux_fraction == 0, sprintf('reverse flux covers %.3f of the bed with backperm on (Python 0.169), none with it off', bp_on.reverse_flux_fraction));
+bp_co = run_case(p, struct('sweep', 1e-3, 'backperm', 'off')).summary;
+[np, nf] = check(np, nf, abs(bp_co.X_CO - co1.X_CO) < 1e-5 && abs(bp_co.H2_recovery - co1.H2_recovery) < 1e-5 && abs(cc1.summary.H2_recovery - run_case(p, struct('sweep', 1e-3, 'flow', 'counter', 'backperm', 'off')).summary.H2_recovery) < 1e-5, 'existing sweep cases (1 bar permeate) are the same with backperm on or off');
+bp_ns = run_case(p, struct('backperm', 'off')).summary;
+bp_base = run_case(p).summary;
+[np, nf] = check(np, nf, abs(bp_ns.X_CO - bp_base.X_CO) < 1e-12 && abs(bp_ns.H2_recovery - bp_base.H2_recovery) < 1e-12, 'without a sweep backperm changes nothing (permeate is H2 made along the bed)');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('backperm', 'maybe')), 'make_case:backperm'), 'invalid backperm stops with make_case:backperm');
+
+% 9. input checks, membrane validity flags, counter-current without a membrane
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('D_s', 0.005)), 'make_case:geometry'), 'shell smaller than the membrane stops with make_case:geometry');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('L', 540)), 'make_case:range'), 'bed length in mm stops with make_case:range');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('T_in', 25)), 'make_case:range'), 'inlet temperature of 25 (looks like C, not K) stops with make_case:range');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('P_in', 4.5)), 'make_case:range'), 'retentate pressure in bar stops with make_case:range');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('F_in', [1 2 3 4 5] * 1e-3)), 'make_case:feed'), 'feed with 5 entries stops with make_case:feed');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('law', 'K9')), 'make_case:law'), 'unknown rate law stops with make_case:law');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('membrane', 'M9')), 'make_case:membrane'), 'unknown membrane stops with make_case:membrane');
+cf = make_case(p, struct('F_in', [0.4 1.2 0.15 0.35 0.05 0.05] * 1e-3));
+[np, nf] = check(np, nf, isequal(size(cf.F_in), [6 1]), 'a row-vector feed is turned into a column');
+lastwarn('');
+make_case(p, struct('P_perm', 5e5));
+[~, wid] = lastwarn;
+[np, nf] = check(np, nf, strcmp(wid, 'make_case:pressure'), 'permeate pressure at or above retentate pressure warns');
+w0 = membrane_validity(p, 'M7', 'off', 673.15, 1.01325e5 + 1.4e5, 1.01325e5, 0.1);
+w1 = membrane_validity(p, 'M7', 'off', 573.15, 4.5e5, 1.01325e5, 0.1);
+w2 = membrane_validity(p, 'M7', 'off', 723.15, 1.01325e5 + 1.4e5, 1.01325e5, 0.1);
+[np, nf] = check(np, nf, isempty(w0) && isempty(w2) && numel(w1) == 2, sprintf('M7 validity: inside the data range gives no flag, 573 K at 3.5 bar dP gives %d flags', numel(w1)));
+wi = membrane_validity(p, 'M7', 'melendez2017_60H2_15CO', 673.15, 1.01325e5 + 1.4e5, 1.01325e5, 0.05);
+[np, nf] = check(np, nf, numel(wi) == 1 && contains(wi{1}, 'CO'), 'inhibition set flags a CO fraction outside its data');
+mb = run_case(p).summary;
+nm0 = run_case(p, struct('perm_scale', 0)).summary;
+[np, nf] = check(np, nf, any(contains(mb.flags, 'membrane M7')) && ~any(contains(nm0.flags, 'membrane')), 'base run reports the M7 extrapolation; a run without a membrane reports none');
+ncz = run_case(p, struct('perm_scale', 0, 'sweep', 1e-3, 'flow', 'counter')).summary;
+ccz = run_case(p, struct('perm_scale', 0)).summary;
+[np, nf] = check(np, nf, abs(ncz.X_CO - ccz.X_CO) < 1e-9 && ncz.H2_recovery == 0, 'counter-current with no membrane runs (no shooting) and matches the co-current result');
+
+% 11. switches, numeric checks and the idle label
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('eta', 'yes')), 'make_case:switch'), 'eta = yes stops with make_case:switch');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('dp', 'true')), 'make_case:switch'), 'dp = true stops with make_case:switch');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('sweep', NaN)), 'make_case:sweep'), 'NaN sweep stops with make_case:sweep');
+[np, nf] = check(np, nf, stops(@() make_case(p, struct('wall', 'cooled', 'U', -5, 'T_wall', 673)), 'make_case:wall'), 'negative U stops with make_case:wall');
+[np, nf] = check(np, nf, bp_on.regime_fraction(1) >= bp_on.reverse_flux_fraction - 0.03, sprintf('reverse flux is not hidden by the idle label (%.3f labelled, %.3f reverse flux)', bp_on.regime_fraction(1), bp_on.reverse_flux_fraction));
+% 12. near-total recovery: no reactant is overdrawn
+nt = run_case(p, struct('T_in', 673.15, 'wall', 'adiabatic', 'sweep', 1e-3, 'flow', 'counter')).summary;
+[np, nf] = check(np, nf, nt.atom_error < 1e-8 && nt.X_CO <= 1 + 1e-9 && nt.H2_recovery <= 1 + 1e-9, sprintf('adiabatic counter-current at near-total recovery: atom error %.1e, X_CO %.7f, recovery %.7f', nt.atom_error, nt.X_CO, nt.H2_recovery));
+% 10. pressure guard and inhibition clip
+[np, nf] = check(np, nf, stops(@() run_case(p, struct('dp', 'on', 'mu', 1e4)), 'solve_cocurrent:stopped'), 'a pressure drop that empties the bed stops the run with solve_cocurrent:stopped');
+Jhi = membrane_flux(p, 'M7', 'melendez2017_60H2_15CO', 673.15, 3e5, 1e5, 1e4);
+Jlo = membrane_flux(p, 'M7', 'melendez2017_60H2_15CO', 673.15, 3e5, 1e5, 50);
+[np, nf] = check(np, nf, Jhi == 0 && Jlo > 0, 'inhibition factor is clipped at zero: no negative flux at very high CO, normal flux at 50 kPa');
+
 fprintf('--- %d passed, %d failed ---\n', np, nf);
 if nf == 0, fprintf('ALL STEP 3 TESTS PASSED\n'); else, error('Step 3 tests failed'); end
 end

@@ -2,12 +2,18 @@ function plot_regime_map()
 % Figures from results/study_regimes.csv: regime maps (A), rate-law comparison (D), hot spots (C).
 root = fileparts(fileparts(fileparts(fileparts(mfilename('fullpath')))));
 d = readtable(fullfile(root, 'results', 'study_regimes.csv'), 'TextType', 'string');
+if ismember('error', d.Properties.VariableNames) && isstring(d.error)
+    nfail = sum(~ismissing(d.error) & strlength(d.error) > 0);
+    if nfail > 0
+        warning('plot_regime_map:failed', '%d study cases failed and are left out (see the error column of study_regimes.csv).', nfail);
+    end
+end
 
 Ls = [0.27 0.54 1.08];  Ps = [0.20265 0.50663 1.01325];  Ts = [623.15 673.15 723.15];
 A = d(d.part == "A", :);
 figure('Color', 'w');
 tl = tiledlayout(2, 3, 'TileSpacing', 'compact');
-title(tl, 'Outlet regime and H2 recovery, 40 % CO, 9.5 wt % catalyst (rxn = reaction, perm = permeance)');
+title(tl, 'Outlet regime and H2 recovery, 40 % CO, 9.5 wt % catalyst (rxn = reaction, perm = permeance, idle = nothing limiting)');
 xlabel(tl, 'bed length (m)');  ylabel(tl, 'permeate pressure (bar)');
 for m = ["M7" "M1"]
     for T0 = Ts
@@ -32,7 +38,7 @@ for y = [0.25 0.40 0.50]
         k = D(near(D.yCO_dry, y) & near(D.T_K, T0) & D.law == "K1", :);
         g = D(near(D.yCO_dry, y) & near(D.T_K, T0) & D.law == "G2", :);
         labels(end + 1, 1) = sprintf('%.0f C, %.0f %% CO', T0 - 273.15, 100 * y); %#ok<AGROW>
-        Xk(end + 1, 1) = k.X_CO;  Xg(end + 1, 1) = g.X_CO; %#ok<AGROW>
+        Xk(end + 1, 1) = one(k, 'X_CO');  Xg(end + 1, 1) = one(g, 'X_CO'); %#ok<AGROW>
     end
 end
 tl = tiledlayout(2, 1, 'TileSpacing', 'compact');
@@ -53,8 +59,9 @@ for T0 = [623.15 673.15]
     for j = 1:2
         w = [0.095 1];
         r = C(near(C.T_K, T0) & near(C.w_cat, w(j)), :);
-        vals(:, j) = [r.T_max(r.wall == "isothermal"); r.T_max(r.wall == "adiabatic"); ...
-                      r.T_max(r.wall == "cooled" & near(r.U, 10)); r.T_max(r.wall == "cooled" & near(r.U, 50)); r.T_max(r.wall == "cooled" & near(r.U, 300))];
+        vals(:, j) = [one(r(r.wall == "isothermal", :), 'T_max'); one(r(r.wall == "adiabatic", :), 'T_max'); ...
+                      one(r(r.wall == "cooled" & near(r.U, 10), :), 'T_max'); one(r(r.wall == "cooled" & near(r.U, 50), :), 'T_max'); ...
+                      one(r(r.wall == "cooled" & near(r.U, 300), :), 'T_max')];
     end
     plot(1:5, vals(:, 1) - 273.15, 'o', 'MarkerSize', 9, 'LineWidth', 1.5);
     plot(1:5, vals(:, 2) - 273.15, 's', 'MarkerSize', 9, 'LineWidth', 1.5);
@@ -69,6 +76,7 @@ switch r
     case "reaction",  c = [0.93 0.69 0.35];
     case "pinch",     c = [0.40 0.62 0.86];
     case "permeance", c = [0.50 0.78 0.55];
+    case "idle",      c = [0.82 0.78 0.90];
     otherwise,        c = [0.80 0.80 0.80];
 end
 end
@@ -78,10 +86,17 @@ switch r
     case "reaction",  t = 'rxn';
     case "pinch",     t = 'pinch';
     case "permeance", t = 'perm';
+    case "idle",      t = 'idle';
+    case "no flux",   t = 'no flux';
     otherwise,        t = 'inactive';
 end
 end
 
 function b = near(a, x)
 b = abs(a - x) < 1e-6;
+end
+
+function v = one(t, name)
+% First value of a column, or NaN if the study has no row for that condition (for example a failed case).
+if height(t) == 0, v = NaN; else, v = t.(name)(1); end
 end

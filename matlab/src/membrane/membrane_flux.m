@@ -20,5 +20,6 @@ alpha = pget(p, ['inhibition.' inh '.alpha']);
 K     = pget(p, ['inhibition.' inh '.K_CO']);
 theta = K .* pCO_kPa ./ (1 + K .* pCO_kPa);
 drive = max(pH2_ret, 0).^n - max(pH2_perm, 0).^n;
-J = Q0 .* exp(-Ea ./ (c.R .* T)) .* drive .* (1 - alpha .* theta);
+free = max(1 - alpha .* theta, 0);        % a set with alpha > 1 would otherwise give a negative flux at high CO
+J = Q0 .* exp(-Ea ./ (c.R .* T)) .* drive .* free;
 end

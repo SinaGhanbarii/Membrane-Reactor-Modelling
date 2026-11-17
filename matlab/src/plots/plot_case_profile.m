@@ -4,7 +4,7 @@ s = out.sol;  pr = out.profile;  c = out.case;
 X = 1 - s.F(:, 1) / c.F_in(1);
 rec = s.Fp / (c.F_in(4) + c.F_in(1));   % counter-current: H2 in the permeate stream at z, which leaves at z = 0
 
-figure('Color', 'w');
+figure('Color', 'w', 'Position', [100 100 700 820]);
 tl = tiledlayout(4, 1, 'TileSpacing', 'compact');
 title(tl, sprintf('%s, %.0f K inlet, %s wall, %s, L = %.2f m, permeate %.2f bar', ...
       c.law, c.T_in, c.wall, c.membrane, c.L, c.P_perm / 1e5));
@@ -14,8 +14,10 @@ nexttile; plot(s.z, X, s.z, rec, 'LineWidth', 1.5); grid on;
 ylabel('fraction'); legend('CO conversion', 'H2 in permeate stream', 'Location', 'southeast');
 nexttile; plot(s.z, pr.beta, 'LineWidth', 1.5); yline(0.9, '--'); grid on;
 ylabel('beta'); ylim([0 1.05]);
-nexttile; semilogy(s.z, pr.pinch_ratio, 'LineWidth', 1.5); yline(1.05, '--'); yline(1, ':'); grid on;
-ylabel('pH2 / permeate pressure');
+ratio = pr.pinch_ratio;  ratio(pr.regime == 5) = NaN;    % the ratio means nothing where the bed is idle
+ratio(pr.pperm < 1e-2 * c.P_perm) = NaN;                 % or where the permeate holds almost no H2 (sweep inlet)
+nexttile; semilogy(s.z, ratio, 'LineWidth', 1.5); yline(1.05, '--'); yline(1, ':'); grid on;
+ylabel('pH2 ratio');  xlim([0 c.L]);
 nexttile;
 if any(pr.regime > 0)
     imagesc(s.z, 1, pr.regime');

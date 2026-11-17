@@ -12,7 +12,7 @@ laws = {'K1', 'G2'};
 loads = [0.095 1];
 
 rows = struct('T_K', {}, 'yCO_dry', {}, 'law', {}, 'w_cat', {}, 'membrane', {}, ...
-              'X_CO', {}, 'X_eq', {}, 'beta_out', {}, 'H2_recovery', {}, 'extrapolated', {}, 'error', {});
+              'X_CO', {}, 'X_eq', {}, 'beta_out', {}, 'H2_recovery', {}, 'extrapolated', {}, 'membrane_extrapolated', {}, 'error', {});
 n = 0;
 total = numel(temps) * numel(ycos) * numel(laws) * numel(loads) * 2;
 for T0 = temps
@@ -23,11 +23,13 @@ for T0 = temps
                 for m = [1 0]
                     n = n + 1;
                     r = struct('T_K', T0, 'yCO_dry', y, 'law', law{1}, 'w_cat', w, 'membrane', m, ...
-                               'X_CO', NaN, 'X_eq', NaN, 'beta_out', NaN, 'H2_recovery', NaN, 'extrapolated', NaN, 'error', "");
+                               'X_CO', NaN, 'X_eq', NaN, 'beta_out', NaN, 'H2_recovery', NaN, 'extrapolated', NaN, 'membrane_extrapolated', NaN, 'error', "");
                     try
                         s = run_case(p, struct('F_in', F, 'T_in', T0, 'law', law{1}, 'w_cat', w, 'perm_scale', m)).summary;
                         r.X_CO = s.X_CO;  r.X_eq = s.X_eq;  r.beta_out = s.beta_out;
-                        r.H2_recovery = s.H2_recovery;  r.extrapolated = ~isempty(s.flags);
+                        r.H2_recovery = s.H2_recovery;
+                        r.extrapolated = any(~contains(s.flags, 'membrane'));          % rate law outside its data range
+                        r.membrane_extrapolated = any(contains(s.flags, 'membrane'));  % membrane or inhibition outside its data range
                     catch err
                         r.error = string(err.message);
                     end

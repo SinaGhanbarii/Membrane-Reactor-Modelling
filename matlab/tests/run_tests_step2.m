@@ -12,7 +12,7 @@ p = load_params();
 % 2. missing value stops a run
 ok = false; try, pget(p, 'membrane.M4.Q0'); catch e, ok = strcmp(e.identifier, 'pget:missing'); end
 [np, nf] = check(np, nf, ok, 'pget stops on a null value (M4 pre-exponential)');
-[np, nf] = check(np, nf, strcmp(p.rate.G2.pressure_unit.kind, 'inferred') && strcmp(pget(p,'rate.G2.pressure_unit'), 'kPa'), 'G2 pressure unit is kPa and labelled inferred');
+[np, nf] = check(np, nf, strcmp(p.rate.G2.pressure_unit.kind, 'reported') && strcmp(pget(p,'rate.G2.pressure_unit'), 'kPa'), 'G2 pressure unit is kPa and labelled reported (Hla 2009 Tables 4-6)');
 [np, nf] = check(np, nf, strcmp(p.rate.K1.conc_basis_used.kind, 'inferred') && strcmp(pget(p,'rate.K1.conc_basis_used'), 'mol cm-3'), 'K1 concentration basis is mol cm-3 and labelled inferred');
 
 % 3. permeance of each option at 400 C, unit driving force (review table 3C)

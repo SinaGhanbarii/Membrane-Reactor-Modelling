@@ -4,8 +4,8 @@ function T = study_regimes()
 %   B: pore diffusion (eta on) x d_p x D_eff x temperature x catalyst loading
 %   C: wall mode (isothermal, adiabatic, cooled) x temperature x catalyst loading
 %   D: feed CO x temperature x rate law x membrane on/off
-% Regime label (a proposal, thresholds to be agreed): reaction if beta_out < 0.9, pinch if the outlet H2
-% partial pressure is within 5 % of the permeate pressure, otherwise permeance.
+% Regime: the label run_case gives the outlet position (no flux, reaction, pinch, permeance or idle; thresholds are proposals,
+% see regime_labels), plus the share of the bed in each label and the label with the largest share.
 % Writes results/study_regimes.csv at the repository root (results/ is ignored by Git).
 p = load_params();
 b = make_case(p);
@@ -54,7 +54,8 @@ end
 nan = NaN;
 tmpl = struct('part', '', 'T_K', nan, 'yCO_dry', nan, 'law', '', 'w_cat', nan, 'membrane', '', 'L', nan, 'P_perm_bar', nan, ...
               'wall', '', 'U', nan, 'd_p', nan, 'D_eff', nan, 'X_CO', nan, 'X_eq', nan, 'beta_out', nan, 'H2_recovery', nan, ...
-              'pinch_ratio', nan, 'T_max', nan, 'T_out', nan, 'eta_min', nan, 'regime', '', 'error', "");
+              'pinch_ratio', nan, 'T_max', nan, 'T_out', nan, 'eta_min', nan, 'regime', '', 'regime_dominant', '', ...
+              'f_noflux', nan, 'f_reaction', nan, 'f_pinch', nan, 'f_permeance', nan, 'f_idle', nan, 'error', "");
 rows = tmpl([]);
 for i = 1:numel(cases)
     r = tmpl;  r.part = cases(i).part;
@@ -70,11 +71,16 @@ for i = 1:numel(cases)
         r.X_CO = s.X_CO;  r.X_eq = s.X_eq;  r.beta_out = s.beta_out;  r.H2_recovery = s.H2_recovery;
         r.pinch_ratio = Fo(4) / sum(Fo) * out.sol.P(end) / c.P_perm;
         r.T_max = max(out.sol.T);  r.T_out = s.T_out;  r.eta_min = min(out.profile.eta);
-        if c.perm_scale == 0,         r.regime = 'no membrane';
-        elseif s.H2_recovery < 0.01,  r.regime = 'membrane inactive';
-        elseif s.beta_out < 0.9,      r.regime = 'reaction';
-        elseif r.pinch_ratio < 1.05,  r.regime = 'pinch';
-        else,                         r.regime = 'permeance';
+        if c.perm_scale == 0
+            r.regime = 'no membrane';
+        else
+            fr = s.regime_fraction;
+            r.f_noflux = fr(1);  r.f_reaction = fr(2);  r.f_pinch = fr(3);  r.f_permeance = fr(4);  r.f_idle = fr(5);
+            [~, imax] = max(fr);
+            r.regime_dominant = s.regime_names{imax};
+            if s.H2_recovery < 0.01, r.regime = 'membrane inactive';
+            else,                    r.regime = s.regime_names{out.profile.regime(end)};
+            end
         end
     catch err
         r.error = string(err.message);

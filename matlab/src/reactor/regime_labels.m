@@ -1,6 +1,6 @@
 function code = regime_labels(beta, pinch, flux_on, idle)
 % Local regime code along the bed (a proposal; thresholds to be agreed):
-%   1 no flux     retentate H2 partial pressure is not above the permeate pressure
+%   1 no/reverse flux   retentate H2 partial pressure is not above the permeate pressure (reverse flux only with a sweep and backperm on)
 %   2 reaction    beta < 0.9, the reaction is not at equilibrium
 %   3 pinch       outlet H2 partial pressure within 5 % of the permeate pressure
 %   4 permeance   reaction at equilibrium and driving force left, so permeation is limited by the membrane

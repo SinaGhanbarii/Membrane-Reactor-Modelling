@@ -25,7 +25,7 @@ if c.perm_scale == 0
     prof.regime = zeros(n, 1);
     frac = nan(5, 1);
 else
-    idle = abs(prof.rxn) < 1e-2 * max(abs(prof.rxn)) & prof.perm < 1e-2 * max(prof.perm);
+    idle = abs(prof.rxn) < 1e-2 * max(abs(prof.rxn)) & abs(prof.perm) < 1e-2 * max(abs(prof.perm));
     prof.regime = regime_labels(prof.beta, pr, prof.perm > 0, idle);
     frac = arrayfun(@(k) mean(prof.regime == k), 1:5)';   % share of bed length (uniform grid)
 end
@@ -37,12 +37,14 @@ sm.X_eq = co_conversion(c.F_in, wgs_equilibrium(c.F_in, s.T(end)));
 sm.H2_recovery = Fpo / (c.F_in(4) + c.F_in(1));
 sm.permeate_H2_fraction = 1;                           % H2 share of the permeate stream (H2 + sweep)
 if c.sweep > 0, sm.permeate_H2_fraction = Fpo / (Fpo + c.sweep); end
-sm.atom_error = max(abs(Eout - element_flows(c.F_in)) ./ element_flows(c.F_in));
+Ein = element_flows(c.F_in);
+sm.atom_error = max(abs(Eout - Ein) ./ max(Ein, 1e-6 * max(Ein)));   % an element absent from the feed (no N2, say) does not divide by zero
 sm.T_out = s.T(end);
 sm.P_out = s.P(end);
 sm.beta_out = prof.beta(end);
-sm.regime_names = {'no flux', 'reaction', 'pinch', 'permeance', 'idle'};
+sm.regime_names = {'no/reverse flux', 'reaction', 'pinch', 'permeance', 'idle'};
+sm.reverse_flux_fraction = mean(prof.perm < 0);        % share of bed length where H2 flows from permeate to retentate
 sm.regime_fraction = frac;
-sm.flags = unique(flags);
+sm.flags = unique(regexprep(flags, ' = [-+0-9.eE]+', ''));   % one line per kind of warning, not per position
 out = struct('case', c, 'sol', s, 'profile', prof, 'summary', sm);
 end
