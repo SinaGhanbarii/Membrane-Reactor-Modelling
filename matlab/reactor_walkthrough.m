@@ -2,6 +2,7 @@
 % 1D steady model of a Pd membrane inside a packed water-gas shift bed (PhD project, EBRI, Aston University).
 % Run one section at a time (Ctrl+Enter). Change the values at the top of a section and run it again.
 % For a slider or drop-down, right-click a number or text value in the Live Editor and choose Add Control.
+% Sections 10 to 12 use the case defined in section 9, so run section 9 first.
 % All results are unvalidated model predictions; the last section lists the main limits.
 
 %% 1. Setup
@@ -109,8 +110,9 @@ plot_case_profile(out)
 % permeance: membrane is the limit. idle: reaction and flux both negligible.
 % The thresholds (beta 0.9, 5 %, 1 %) are proposals, not findings.
 figure
-bar(categorical(sm.regime_names, sm.regime_names), 100 * sm.regime_fraction)
-ylabel('share of bed length (%)')
+b = bar(categorical(sm.regime_names, sm.regime_names), 100 * sm.regime_fraction, 'FaceColor', 'flat');
+b.CData = regime_colours;                % the same colours as the profile plots
+ylabel('share of bed length (%)'), ylim([0 100])
 
 %% 11. Co-current against counter-current
 % Same case and sweep, both directions.
@@ -119,27 +121,35 @@ cmp = rmfield(ov, {'flow', 'sweep'});
 cmp.sweep = sweep_compare_mmol_s * 1e-3;
 plot_flow_compare(p, cmp)
 
-%% 12. Sweep gas: recovery against permeate purity
-% More sweep raises recovery but dilutes the permeate that would go to the SOFC.
+%% 12. Sweep gas and membrane flux: how much of the recovery is real?
+% Left: recovery as the membrane flux is scaled down (1 = the flux of the membrane chosen in section 9). A counter-current recovery
+% of 1 only says the membrane is not the limit; the curve shows how much flux the case can lose before recovery drops.
+% Right: more sweep dilutes the permeate that would go to the SOFC.
+factors = [1 0.5 0.33 0.25 0.2 0.1 0.05];
 sweeps = [0.5 1 2 5];
 flows = {'cocurrent', 'counter'};
-recovery = zeros(2, numel(sweeps));
+recovery = zeros(2, numel(factors));
 share = zeros(2, numel(sweeps));
 for i = 1:2
+    for k = 1:numel(factors)
+        o = rmfield(ov, 'flow');
+        o.flow = flows{i};
+        o.perm_scale = factors(k);
+        recovery(i, k) = run_case(p, o).summary.H2_recovery;
+    end
     for k = 1:numel(sweeps)
         o = rmfield(ov, {'flow', 'sweep'});
         o.flow = flows{i};
         o.sweep = sweeps(k) * 1e-3;
-        s = run_case(p, o).summary;
-        recovery(i, k) = s.H2_recovery;
-        share(i, k) = s.permeate_H2_fraction;
+        share(i, k) = run_case(p, o).summary.permeate_H2_fraction;
     end
 end
 figure('Position', [100 100 800 340]);
 tiledlayout(1, 2)
 nexttile
-plot(sweeps, recovery', '-o'), grid on
-xlabel('sweep gas (mmol/s)'), ylabel('H2 recovery'), legend(flows, 'Location', 'southeast')
+semilogx(factors, recovery', '-o'), grid on
+xlabel('membrane flux factor'), ylabel('H2 recovery'), ylim([0 1.05]), legend(flows, 'Location', 'southeast')
+title(sprintf('sweep %.1f mmol/s', ov.sweep * 1e3))
 nexttile
 plot(sweeps, share', '-o'), grid on
 xlabel('sweep gas (mmol/s)'), ylabel('H2 share of permeate')
@@ -153,7 +163,7 @@ for part = strsplit(key, '.')
 end
 leaf
 
-% Main limits of the model
+%% 14. Main limits of the model
 %
 % - Membrane M7 flux is extrapolated from 1.2-1.6 bar data to 4-5 bar.
 %
@@ -163,7 +173,7 @@ leaf
 %
 % - Both laws are used outside their fitted windows.
 %
-% - Counter-current recoveries close to 100 % are upper bounds: ideal pure-H2 permeate, no polarisation, inert sweep.
+% - Counter-current recoveries close to 100 % are upper bounds: ideal pure-H2 permeate, no polarisation, inert sweep. Section 12 shows how fast recovery falls when the flux is lower.
 %
 % - Wall heat transfer, bed voidage and effective diffusivity are assumed.
 %

@@ -39,12 +39,12 @@ nexttile; hold on;
 for i = 1:2
     plot(o{i}.sol.z, o{i}.profile.perm, 'Color', colours(i, :), 'LineWidth', 1.5);
 end
-grid on; xlim([0 c.L]); ylabel('H2 flux');
+grid on; xlim([0 c.L]); ylabel('H2 flux (mol m^{-1} s^{-1})');
 
 for i = 1:2
     nexttile;
     imagesc(o{i}.sol.z, 1, o{i}.profile.regime');
-    colormap(gca, [0.80 0.80 0.80; 0.93 0.69 0.35; 0.40 0.62 0.86; 0.50 0.78 0.55; 0.82 0.78 0.90]);
+    colormap(gca, regime_colours);
     clim([0.5 5.5]); yticks(1); yticklabels(tags(i));
 end
 cb = colorbar('Location', 'southoutside');

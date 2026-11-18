@@ -21,7 +21,7 @@ ylabel('pH2 ratio');  xlim([0 c.L]);
 nexttile;
 if any(pr.regime > 0)
     imagesc(s.z, 1, pr.regime');
-    colormap(gca, [0.80 0.80 0.80; 0.93 0.69 0.35; 0.40 0.62 0.86; 0.50 0.78 0.55; 0.82 0.78 0.90]);
+    colormap(gca, regime_colours);
     clim([0.5 5.5]);
     cb = colorbar('Location', 'southoutside');
     cb.Ticks = 1:5;  cb.TickLabels = out.summary.regime_names;

@@ -16,7 +16,8 @@ rows = {
   'CO inhibition, Melendez 15 %',  'inhibition.melendez2017_60H2_15CO', {'alpha','alpha'; 'K_CO','K_CO'}
   'CO inhibition, Melendez 5 %',   'inhibition.melendez2017_60H2_5CO',  {'alpha','alpha'; 'K_CO','K_CO'}
   'Catalyst (Hla 2015)',   'catalyst.Hla2015', {'rho_p','rho_p'; 'cp','cp'; 'k (catalyst)','k'; 'd_p','d_p'; 'identity','catalyst_identity'}
-  'Reactor (Hla 2015 case)', 'cases.hla2015', {'shell ID','shell_inner_diameter'; 'voidage','bed_voidage'; 'membrane area','membrane_area'; 'steam/carbon','steam_to_carbon'}
+  'Reactor (as reported, Hla 2015)', 'cases.hla2015', {'shell ID','shell_inner_diameter'; 'voidage','bed_voidage'; 'membrane area','membrane_area'; 'steam/carbon','steam_to_carbon'}
+  'Reactor (base case used here)', 'cases.base', {'shell ID','shell_ID'; 'voidage','bed_voidage'; 'd_p','d_p'; 'catalyst fraction','catalyst_wt_frac'}
   'Reactor (target case)', 'cases.target', {'geometry','geometry'}
   'Swept parameters',      'sweep',     {'U wall','U_wall'; 'd_p','d_p'; 'D_eff','D_eff'; 'delta','delta_membrane'; 'voidage','bed_voidage'}
 };
@@ -35,7 +36,7 @@ for r = 1:size(rows,1)
     end
 end
 colors = [1 1 1; 0.17 0.63 0.17; 0.12 0.47 0.71; 1.00 0.50 0.05; 0.58 0.40 0.74; 0.84 0.15 0.16; 0.00 0.60 0.60];
-figure('Name', 'Evidence matrix', 'Color', 'w', 'Position', [60 60 1250 640]);
+figure('Name', 'Evidence matrix', 'Color', 'w', 'Position', [60 60 1250 700]);
 imagesc(code); colormap(colors); clim([-0.5 6.5]);
 set(gca, 'XTick', 1:numel(cols), 'XTickLabel', cols, 'XTickLabelRotation', 45, ...
          'YTick', 1:size(rows,1), 'YTickLabel', rows(:,1), 'TickLength', [0 0]);
@@ -43,9 +44,12 @@ hold on;
 for x = 0.5:1:numel(cols)+0.5, plot([x x], [0.5 size(rows,1)+0.5], 'Color', 'w', 'LineWidth', 2, 'HandleVisibility', 'off'); end
 for y = 0.5:1:size(rows,1)+0.5, plot([0.5 numel(cols)+0.5], [y y], 'Color', 'w', 'LineWidth', 2, 'HandleVisibility', 'off'); end
 for j = 1:numel(names)
-    scatter(nan, nan, 70, colors(j+1,:), 's', 'filled', 'DisplayName', names{j});
+    if any(code(:) == j)                               % list only the kinds that occur in the matrix
+        scatter(nan, nan, 70, colors(j+1,:), 's', 'filled', 'DisplayName', names{j});
+    end
 end
 legend('Location', 'southoutside', 'Orientation', 'horizontal', 'Box', 'off');
+ax = gca;  ax.Position = [0.24 0.27 0.74 0.66];   % leave room for the long row labels
 title('Evidence status of each parameter (white = not applicable)');
 end
 
