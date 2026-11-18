@@ -1,8 +1,6 @@
 # Membrane reactor modelling (pbmr1d)
 
-1D model of a packed-bed water-gas shift (WGS) reactor with a Pd membrane, for the PhD project
-*Membrane and Fuel Cell Integration for Low Carbon Hydrogen Utilisation* (EBRI, Aston University).
-Last updated 18 November 2026.
+1D model of a packed-bed water-gas shift (WGS) reactor with a Pd membrane
 
 **Status: the model is implemented and verified against itself. It is not yet validated against measurements.**
 
